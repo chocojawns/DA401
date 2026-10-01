@@ -1,0 +1,7 @@
+# Core financial analysis and Item 1A extraction; AI dependencies deferred.
+pandas
+requests
+matplotlib
+scikit-learn
+beautifulsoup4
+sec-edgar-downloader

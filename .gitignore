@@ -1,0 +1,26 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+gemini_api_key.py
+*_api_key.py
+*.pem
+# Python/editor files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+# Generated financial data, filings, and AI outputs
+results/
+sec_cache/
+sec_edgar_downloads/
+sec-edgar-filings/
+staged_10k*.jsonl
+full_10k_filings.json
+merged_risk_data.csv
+sector_risk_analysis.csv
+test_sector_risks.csv
