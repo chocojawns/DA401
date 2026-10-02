@@ -43,8 +43,8 @@ def load_companies(filename):
         raise ValueError(f"{filename} has an invalid CIK")
     return dict(zip(companies["SYMBOL"].str.strip(), companies["CIK_PADDED"]))
 
-INDUSTRIAL = load_companies("industrials_ciks.csv")
-HEALTHCARE = load_companies("health_care_ciks.csv")
+INDUSTRIAL = load_companies("industrials/industrials_ciks.csv")
+HEALTHCARE = load_companies("healthcare/health_care_ciks.csv")
 SECTOR_COMPANIES = {"Industrial": INDUSTRIAL, "Healthcare": HEALTHCARE}
 
 NET_INCOME_TAGS = ["NetIncomeLoss"]

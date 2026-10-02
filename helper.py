@@ -110,8 +110,8 @@ def load_companies(filename):
     )
 
 
-INDUSTRIAL = load_companies("industrials_ciks.csv")
-HEALTHCARE = load_companies("health_care_ciks.csv")
+INDUSTRIAL = load_companies("industrials/industrials_ciks.csv")
+HEALTHCARE = load_companies("healthcare/health_care_ciks.csv")
 
 SECTOR_COMPANIES = {
     "Industrial": INDUSTRIAL,

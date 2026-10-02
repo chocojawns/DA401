@@ -6,11 +6,11 @@ DuPont ROE analysis of healthcare and industrial companies, with an Item 1A risk
 
 - `homeWork4AndyJohnson.py`: financial analysis for 2020–2025, tables, graphs, outliers, and clustering.
 - `helper.py`: extended financial analysis and Item 1A collection. This is an executable script, not a safe-to-import utility module.
-- `health_care_ciks.csv`, `industrials_ciks.csv`: company lists; keep beside the main scripts.
+- `healthcare/health_care_ciks.csv`, `industrials/industrials_ciks.csv`: sector company lists.
 - `docs/Homework #4 Document.pdf`: assignment reference.
 - `examples/`: supplied Item 1A, Gemini, and merged-analysis examples; not a connected, validated pipeline.
 
-The AI provider has not been selected. No AI requests are needed to collaborate on this repository.
+OpenAI is selected for the new draft risk-analysis workflow. The old Gemini files remain reference examples. No AI requests are needed to collaborate on this repository.
 
 ## Python setup
 
@@ -203,3 +203,36 @@ Before using the examples for research:
 The examples execute work at module level. Do not import or run them casually: the collector downloads filings and the Gemini example can make billable requests once configured. The merged-analysis example expects a `merged_risk_data.csv` file that is not supplied.
 
 Never commit API keys, `.env` files, or credential modules. Keep reproducible source evidence and distinguish AI judgments from established financial facts.
+
+## Sector responsibilities and OpenAI draft
+
+- **Andy:** [healthcare workspace](healthcare/README.md).
+- **Partner:** [industrials workspace](industrials/README.md).
+- **Shared methods:** root-level `homeWork4AndyJohnson.py`, `helper.py`, and `analyze_10k_risks.py`. Company CSV paths have been updated in both financial scripts. The financial scripts continue to analyze both sectors together for cross-sector comparisons; the new API script processes one sector per run.
+
+### Input metadata
+
+`analyze_10k_risks.py` reads UTF-8 JSONL (one object per line). Each record requires `ticker`, `company_name`, `fiscal_year`, `filing_date` (YYYY-MM-DD), `source_url`, and full `item_1a_text`. Include `accession_number` when available. Filing date and fiscal year must come from the actual SEC filing metadata; never infer fiscal year from filing date. Older collectors need their metadata adapted before this script can consume their output. This script does not download filings or calculate financial ratios.
+
+### Run the draft
+
+```sh
+python -m pip install -r requirements-openai.txt
+python analyze_10k_risks.py --sector healthcare --input healthcare/results/staged_10k_batch.jsonl
+```
+
+The first run is a preview and makes no API requests. Replace `healthcare` with `industrials` for the other sector. Both dry runs and live runs validate record dates and length, filter tickers against the sector CSV, and skip completed identical inputs. The default is one new filing; `--limit 5` selects at most five. Records outside the chosen sector are reported and skipped.
+
+Set a newly generated key in `OPENAI_API_KEY` using your local environment or secret manager. Do not paste keys into scripts, GitHub, or chat. `.env` files are ignored, but this script does not automatically load them. No key is included in this repository.
+
+```sh
+python analyze_10k_risks.py --sector healthcare --input healthcare/results/staged_10k_batch.jsonl --limit 1 --execute
+```
+
+`--execute` authorizes billable API requests. `--model` overrides the draft default `gpt-4.1-mini`; verify model availability and current pricing first. Results are appended after each success to the sector's `results/10k_risk_analysis.jsonl`, including source dates/URL, model, prompt version, UTC analysis timestamp, structured risks, exact supporting quotations, and token usage. The analysis ID hashes the entire input, model, and prompt version. Changing any of these triggers new work.
+
+The script has no automatic retries and stops on errors. A request that fails validation may still cost money. Do not run two processes writing the same output file. A crash after an API response but before saving can cause a repeated request on rerun. Review saved results before restarting. Keep local output backups: ignored results are not uploaded by Git.
+
+Texts outside 500–100,000 characters are rejected rather than truncated. Character length is only a guard, not a token estimate or proof of correct Item 1A extraction. Exact-quote checks do not prove the interpretation is valid; manually review results. Severity probabilities and buy/sell recommendations are deliberately absent. This is a starting draft, not a validated investment model.
+
+Validation for this update: offline dry-run filtering, metadata rejection, and resume behavior checked. No paid API calls or full SEC/financial runs performed.
