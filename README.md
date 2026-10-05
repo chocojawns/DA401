@@ -236,3 +236,9 @@ The script has no automatic retries and stops on errors. A request that fails va
 Texts outside 500–100,000 characters are rejected rather than truncated. Character length is only a guard, not a token estimate or proof of correct Item 1A extraction. Exact-quote checks do not prove the interpretation is valid; manually review results. Severity probabilities and buy/sell recommendations are deliberately absent. This is a starting draft, not a validated investment model.
 
 Validation for this update: offline dry-run filtering, metadata rejection, and resume behavior checked. No paid API calls or full SEC/financial runs performed.
+
+## New stage 1 program: HealthcareStats.py
+
+Start with [HealthcareStats.py](HealthcareStats.py) for the new healthcare-only-by-default SEC/DuPont/Item 1A workflow. It creates auditable financial tables, dated Item 1A JSONL, coverage reports, and three graphs. It uses average balance-sheet denominators, unlike the legacy ending-balance scripts. It makes no OpenAI calls; that stage is deferred until these outputs are verified.
+
+Read the [methods, commands, limitations, and statistical research plan](docs/HealthcareStats-methods.md) before running or interpreting results. Offline synthetic tests pass; live SEC validation is pending network access. Do not describe this draft as validated on real company data yet.
