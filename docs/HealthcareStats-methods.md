@@ -48,7 +48,7 @@ Financial facts must share the exact annual period and accession. Original 10-K 
 
 Each available company-year is retained. Missing years do not automatically remove all other observations for the company. The current company CSV is a selected universe, not historical S&P membership: survivorship and selection bias remain. Current SEC Company Facts snapshots may contain later corrections even when original accessions are used; this is not a reconstructed historical investable database.
 
-Negative/zero equity at either endpoint or average equity below 1% of average assets triggers a warning. Those rows stay in source tables but are omitted from the component comparison and operating-profile plots. The heatmap includes flagged observations, with no silent winsorization. The 1% rule is a transparent diagnostic choice, not a universal statistical standard; run sensitivity analyses before interpretation. Zero average equity has undefined ROE.
+Negative/zero equity at either endpoint or average equity below 1% of average assets triggers a warning. Those rows stay in source tables but are omitted from the component comparison and operating-profile plots. All presentation charts exclude flagged observations, which remain available in the source tables. No silent winsorization is applied. The 1% rule is a transparent diagnostic choice, not a universal statistical standard; run sensitivity analyses before interpretation. Zero average equity has undefined ROE.
 
 ## Files and figures
 
@@ -57,9 +57,10 @@ Negative/zero equity at either endpoint or average equity below 1% of average as
 - `retrieval_status.csv`: successes/failures separately for metadata, financial calculations, and Item 1A.
 - `coverage.csv`: every requested company-year, with financial and Item 1A availability.
 - `equity_warnings.csv`: potentially unstable equity denominators.
-- `annual_components.png` and `annual_summary.csv`: annual medians, sample counts, and 25th–75th percentiles. The shaded interval describes company dispersion, NOT a confidence interval. The sample can change by year.
-- `operating_profiles.png`: margins versus turnover, colored by leverage. Repeated years from a company are not independent points.
-- `roe_heatmap.png`: company-year patterns and missing values. High ROE is not automatically good; read equity warnings.
+- `roe_trend.png`, `profit_margin_trend.png`, `asset_turnover_trend.png`, `equity_multiplier_trend.png`: four separate, labeled median line charts with company counts. Missing years leave gaps. The sample can change by year.
+- `annual_summary.csv`: medians, quartiles, and sample counts underlying the trends. Quartiles describe dispersion, not confidence intervals.
+- `company_roe_YEAR_PAGE.png`: sorted horizontal bars with company names, tickers, and ROE percentages for the latest financial year. Pages contain at most 20 companies; all eligible companies are included.
+- `company_roe_comparison.csv`: values behind the company bar chart.
 - `next_year_research_pairs.csv`: consecutive fiscal-year financial pairs and next-year margin changes in percentage points. It is a preparation table, not a fitted statistical model.
 - `manifest.json`: requested universe, cutoff, source-list and program hashes, and row count.
 

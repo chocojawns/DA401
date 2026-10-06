@@ -79,7 +79,7 @@ class Tests(unittest.TestCase):
                                    '--cache',str(cache),'--output',str(root/'results')],capture_output=True,text=True)
             self.assertEqual(result.returncode,0,result.stderr)
             run=next((root/'results').iterdir())
-            for name in ['financials.csv','coverage.csv','retrieval_status.csv','annual_components.png','roe_heatmap.png','operating_profiles.png']:
+            for name in ['financials.csv','coverage.csv','retrieval_status.csv','roe_trend.png','profit_margin_trend.png','asset_turnover_trend.png','equity_multiplier_trend.png','company_roe_2024_1.png']:
                 self.assertGreater((run/name).stat().st_size,0)
             record=json.loads((run/'staged_10k_batch.jsonl').read_text())
             self.assertEqual(record['fiscal_year'],2024)

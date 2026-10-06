@@ -239,6 +239,21 @@ Validation for this update: offline dry-run filtering, metadata rejection, and r
 
 ## New stage 1 program: HealthcareStats.py
 
-Start with [HealthcareStats.py](HealthcareStats.py) for the new healthcare-only-by-default SEC/DuPont/Item 1A workflow. It creates auditable financial tables, dated Item 1A JSONL, coverage reports, and three graphs. It uses average balance-sheet denominators, unlike the legacy ending-balance scripts. It makes no OpenAI calls; that stage is deferred until these outputs are verified.
+Start with [HealthcareStats.py](HealthcareStats.py) for the new healthcare-only-by-default SEC/DuPont/Item 1A workflow. It creates auditable financial tables, dated Item 1A JSONL, coverage reports, and simple line/bar charts. It uses average balance-sheet denominators, unlike the legacy ending-balance scripts. It makes no OpenAI calls; that stage is deferred until these outputs are verified.
 
 Read the [methods, commands, limitations, and statistical research plan](docs/HealthcareStats-methods.md) before running or interpreting results. Offline synthetic tests pass; live SEC validation is pending network access. Do not describe this draft as validated on real company data yet.
+
+### Windows: Beautiful Soup import or pip access-denied errors
+
+If `from bs4 import BeautifulSoup` fails and pip reports `WinError 5` in the old environment's `beautifulsoup4-*.dist-info`, use a fresh virtual environment outside OneDrive. The traceback establishes a local package-access problem, not its exact cause. Leave the existing environment and project files intact. The package to install is `beautifulsoup4`; its Python import name is `bs4`.
+
+In PowerShell from your DA401 checkout (stop if any command fails):
+
+```powershell
+py -3 -m venv "$env:LOCALAPPDATA\DA401\healthcare-venv"
+& "$env:LOCALAPPDATA\DA401\healthcare-venv\Scripts\python.exe" -m pip install --upgrade pip
+& "$env:LOCALAPPDATA\DA401\healthcare-venv\Scripts\python.exe" -m pip install -r requirements.txt
+& "$env:LOCALAPPDATA\DA401\healthcare-venv\Scripts\python.exe" -c "from bs4 import BeautifulSoup; print('Beautiful Soup works')"
+```
+
+If `py` is unavailable, use your installed base Python executable to create the environment. In VS Code, use **Python: Select Interpreter → Enter interpreter path** and select the new environment's `Scripts\python.exe` under the directory printed by `$env:LOCALAPPDATA`. Open a new terminal afterward. You do not need to run VS Code as administrator or change file permissions.

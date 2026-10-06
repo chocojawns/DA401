@@ -174,38 +174,57 @@ def charts(frame, out, label):
     clean = frame[~frame.equity_warning].copy()
     if clean.empty:
         return
-    fig, axes = plt.subplots(2, 2, figsize=(12, 8))
+    names = {'roe': 'Return on equity', 'profit_margin': 'Profit margin',
+             'asset_turnover': 'Asset turnover', 'equity_multiplier': 'Equity multiplier'}
     summary = []
-    for metric, ax in zip(METRICS, axes.flat):
+    years = range(int(frame.fiscal_year.min()), int(frame.fiscal_year.max()) + 1)
+    for metric in METRICS:
         grouped = clean.groupby('fiscal_year')[metric]
-        med, low, high = grouped.median(), grouped.quantile(.25), grouped.quantile(.75)
+        med = grouped.median().reindex(years)
         scale = 100 if metric in ['profit_margin', 'roe'] else 1
-        ax.plot(med.index, med * scale, marker='o')
-        ax.fill_between(med.index, low * scale, high * scale, alpha=.2)
-        ax.set_title(metric + (' (%)' if scale == 100 else ' (x)'))
-        for year, value in med.items():
+        unit = '%' if scale == 100 else 'x'
+        fig, ax = plt.subplots(figsize=(10, 6))
+        ax.plot(med.index, med * scale, color='#2465a4', marker='o', linewidth=2)
+        ax.set(title=f'{label.title()}: median {names[metric].lower()} by year',
+               xlabel='Fiscal year', ylabel=f'{names[metric]} ({unit})')
+        ax.set_xticks(list(years))
+        ax.axhline(0, color='gray', linewidth=.7)
+        ax.grid(axis='y', alpha=.2)
+        ax.margins(y=.25)
+        for year, value in med.dropna().items():
             n = int(grouped.count().loc[year])
-            ax.annotate(f'n={n}', (year, value * scale))
+            ax.annotate(f'{value * scale:.1f}{unit}\n{n} companies',
+                        (year, value * scale), xytext=(0, 10),
+                        textcoords='offset points', ha='center', fontsize=9)
             summary.append(dict(fiscal_year=year, metric=metric, median=value,
-                                q25=low.loc[year], q75=high.loc[year], n=n))
-    fig.suptitle(label + ': annual medians and interquartile ranges (not confidence intervals)')
-    fig.tight_layout(); fig.savefig(out/'annual_components.png', dpi=160); plt.close(fig)
+                                q25=grouped.quantile(.25).loc[year],
+                                q75=grouped.quantile(.75).loc[year], n=n))
+        fig.text(.5, .02, 'Available companies; sample may change by year. Flagged equity excluded.',
+                 ha='center', fontsize=9)
+        fig.tight_layout(rect=(0, .05, 1, 1))
+        fig.savefig(out/f'{metric}_trend.png', dpi=160)
+        plt.close(fig)
     pd.DataFrame(summary).to_csv(out/'annual_summary.csv', index=False)
-    fig, ax = plt.subplots(figsize=(9, 6))
-    dots = ax.scatter(clean.asset_turnover, clean.profit_margin*100,
-                      c=clean.equity_multiplier, cmap='viridis', alpha=.65)
-    ax.set(xlabel='Asset turnover (x)', ylabel='Profit margin (%)',
-           title=label + ': company-years; color = equity multiplier')
-    fig.colorbar(dots, ax=ax, label='Equity multiplier (x)')
-    fig.tight_layout(); fig.savefig(out/'operating_profiles.png', dpi=160); plt.close(fig)
-    pivot = frame.pivot(index='ticker', columns='fiscal_year', values='roe') * 100
-    fig, ax = plt.subplots(figsize=(10, max(3, len(pivot)*.23)))
-    # Do not hide missing observations or silently cap extreme values.
-    im = ax.imshow(np.ma.masked_invalid(pivot.to_numpy()), aspect='auto', cmap='coolwarm')
-    ax.set_yticks(range(len(pivot)), pivot.index)
-    ax.set_xticks(range(len(pivot.columns)), pivot.columns)
-    ax.set_title(label + ': ROE (%) including flagged equity; inspect warnings CSV')
-    fig.colorbar(im, ax=ax); fig.tight_layout(); fig.savefig(out/'roe_heatmap.png', dpi=160); plt.close(fig)
+    year = int(frame.fiscal_year.max())
+    latest = clean[clean.fiscal_year == year].sort_values('roe')
+    latest[['ticker', 'company_name', 'fiscal_year', 'roe']].to_csv(out/'company_roe_comparison.csv', index=False)
+    if latest.empty:
+        return
+    # Paginate to keep all company labels readable, without selecting only winners.
+    for page, start in enumerate(range(0, len(latest), 20), 1):
+        subset = latest.iloc[start:start+20]
+        fig, ax = plt.subplots(figsize=(12, max(5, len(subset)*.4+2)))
+        bars = ax.barh([f'{r.company_name} ({r.ticker})' for r in subset.itertuples()],
+                       subset.roe*100, color='#2465a4')
+        ax.bar_label(bars, labels=[f'{x:.1f}%' for x in subset.roe*100], padding=4)
+        ax.axvline(0, color='gray', linewidth=.8)
+        ax.margins(x=.2)
+        ax.set(title=f'{label.title()}: company ROE in {year} — page {page}', xlabel='Return on equity (%)')
+        fig.text(.5, .02, 'Flagged equity excluded. Higher ROE alone does not mean a better investment.',
+                 ha='center', fontsize=9)
+        fig.tight_layout(rect=(0,.05,1,1))
+        fig.savefig(out/f'company_roe_{year}_{page}.png', dpi=160)
+        plt.close(fig)
 
 
 def main():
