@@ -263,3 +263,7 @@ If `py` is unavailable, use your installed base Python executable to create the 
 [AIResearch.py](AIResearch.py) is the new question-driven OpenAI research program for healthcare and industrials. It pairs each run's Item 1A JSONL with financials.csv, calculates annual changes, and requests cited risk interpretations addressing why investors should care. It runs separately from HealthcareStats.py and defaults to a no-charge dry run. The earlier analyze_10k_risks.py remains a basic draft; use AIResearch.py for the integrated research workflow.
 
 See the [input commands, research prompt, cost controls, and source limitations](docs/AIResearch-guide.md). The program produces a research workbook, not a finished presentation or verified causal findings. Sources are supplied SEC filings; external web/literature research is not enabled. Live API execution remains untested.
+
+## Financial analysis: HealthcareAnalysis.py
+
+[HealthcareAnalysis.py](HealthcareAnalysis.py) reads a completed HealthcareStats run and produces financial comparisons, company outliers, consecutive-year changes, exploratory clustering, and a sourced list of research questions. It performs no downloads or AI calls. Supply documented subsector classifications to enable pharma/provider/insurer/etc. comparisons; labels are not guessed. See the [analysis guide](docs/HealthcareAnalysis-guide.md) for commands, outputs, and interpretation limits.
