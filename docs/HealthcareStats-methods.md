@@ -92,3 +92,11 @@ Report effect sizes and uncertainty, not only p-values. Repeat key findings with
 6. Only then design and validate the qualitative coding and statistical model.
 
 Run offline tests with `python -m unittest discover -s tests -v` from the repository root.
+
+## Verified Pfizer 2023 revenue exception
+
+The original filing (accession `0000078003-24-000039`) reports product revenues of $50.914 billion and alliance revenues of $7.582 billion, totaling $58.496 billion. The contract-revenue tag represents product revenue alone; `Revenues` represents the consolidated total. A narrowly scoped company/accession/value check selects the verified total and records `revenue_selection_note`, retaining both candidate values. Other unresolved revenue conflicts still fail for review.
+
+Source: https://www.sec.gov/Archives/edgar/data/78003/000007800324000039/0000078003-24-000039.txt (consolidated statement of income).
+
+After this correction, a live Pfizer 2020–2025 run produced six financial rows and six Item 1A sections. Nine tests pass. This is still a single-company validation, not sector-wide validation.

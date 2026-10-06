@@ -47,6 +47,20 @@ class Tests(unittest.TestCase):
         facts['facts']['us-gaap']['SalesRevenueNet']={'units':{'USD':[dict(filing,val=90)]}}
         with self.assertRaisesRegex(ValueError,'Conflicting revenue'): h.calculate(facts,filing)
 
+    def test_verified_pfizer_revenue_resolution(self):
+        facts,filing,_=fixture()
+        filing['accn']='0000078003-24-000039'
+        for concept in facts['facts']['us-gaap'].values():
+            for row in concept['units']['USD']: row['accn']=filing['accn']
+        facts['facts']['us-gaap']['Revenues']['units']['USD'][0]['val']=58496000000.0
+        facts['facts']['us-gaap']['RevenueFromContractWithCustomerExcludingAssessedTax']={'units':{'USD':[dict(filing,val=50914000000.0)]}}
+        result=h.calculate(facts,filing)
+        self.assertEqual(result['revenue'],58496000000.0)
+        self.assertEqual(result['revenue_tag'],'Revenues')
+        self.assertTrue(result['revenue_selection_note'])
+        facts['cik']=123
+        with self.assertRaises(ValueError): h.calculate(facts,filing)
+
     def test_negative_equity_flagged(self):
         facts,filing,_=fixture()
         for r in facts['facts']['us-gaap']['StockholdersEquity']['units']['USD']: r['val']=-10
