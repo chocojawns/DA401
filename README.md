@@ -257,3 +257,9 @@ py -3 -m venv "$env:LOCALAPPDATA\DA401\healthcare-venv"
 ```
 
 If `py` is unavailable, use your installed base Python executable to create the environment. In VS Code, use **Python: Select Interpreter → Enter interpreter path** and select the new environment's `Scripts\python.exe` under the directory printed by `$env:LOCALAPPDATA`. Open a new terminal afterward. You do not need to run VS Code as administrator or change file permissions.
+
+## Stage 2: AIResearch.py
+
+[AIResearch.py](AIResearch.py) is the new question-driven OpenAI research program for healthcare and industrials. It pairs each run's Item 1A JSONL with financials.csv, calculates annual changes, and requests cited risk interpretations addressing why investors should care. It runs separately from HealthcareStats.py and defaults to a no-charge dry run. The earlier analyze_10k_risks.py remains a basic draft; use AIResearch.py for the integrated research workflow.
+
+See the [input commands, research prompt, cost controls, and source limitations](docs/AIResearch-guide.md). The program produces a research workbook, not a finished presentation or verified causal findings. Sources are supplied SEC filings; external web/literature research is not enabled. Live API execution remains untested.
