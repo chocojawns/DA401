@@ -118,18 +118,30 @@ def extract_item1a(html):
     soup = BeautifulSoup(html, 'html.parser')
     for node in soup(['script', 'style', 'ix:header']):
         node.decompose()
+    # Match standalone HTML headings, not in-paragraph cross-references.
+    start_pattern = re.compile(r'ITEM\s*1\s*A[\s.:–—-]*RISK\s+FACTORS[\s.:–—-]*', re.I)
+    end_pattern = re.compile(r'ITEM\s*(?:1\s*B[\s.:–—-]*UNRESOLVED\s+STAFF\s+COMMENTS|1\s*C[\s.:–—-]*CYBERSECURITY|2[\s.:–—-]*PROPERTIES)[\s.:–—-]*', re.I)
+    markers = []
+    for node in soup.find_all(['div', 'p', 'h1', 'h2', 'h3', 'h4', 'td']):
+        text = ' '.join(node.get_text(' ').split())
+        kind = 'start' if start_pattern.fullmatch(text) else 'end' if end_pattern.fullmatch(text) else None
+        if kind:
+            markers.append((node, kind))
+    # Nested containers may repeat the same heading; use the innermost match.
+    marked_ids = {id(node) for node, _ in markers}
+    for node, kind in markers:
+        if any(id(child) in marked_ids for child in node.find_all(True)):
+            continue
+        node.insert_before(' DA401_SECTION_' + kind.upper() + ' ')
     text = ' '.join(soup.get_text(' ').split())
-    starts = list(re.finditer(r'\bITEM\s*1\s*A\b[\s.:–—-]*RISK\s+FACTORS\b', text, re.I))
-    ending = re.compile(r'\bITEM\s*(?:1\s*B\b[\s.:–—-]*UNRESOLVED\s+STAFF|1\s*C\b[\s.:–—-]*CYBERSECURITY|2\b[\s.:–—-]*PROPERTIES)', re.I)
     candidates = []
-    for i, start in enumerate(starts):
-        stop = ending.search(text, start.end())
-        if stop and not (i+1 < len(starts) and starts[i+1].start() < stop.start()):
-            section = text[start.start():stop.start()]
-            if len(section) > 500:
-                candidates.append(section)
+    for match in re.finditer(r'DA401_SECTION_START (.*?)(?=DA401_SECTION_END|DA401_SECTION_START|$)', text):
+        section = match.group(1).strip()
+        # A real ending heading is mandatory; no whole-document fallback.
+        if text[match.end():].startswith('DA401_SECTION_END') and len(section) > 500:
+            candidates.append(section)
     if not candidates:
-        raise ValueError('No bounded Item 1A; no whole-document fallback allowed')
+        raise ValueError('No bounded standalone Item 1A heading; manual review required')
     return max(candidates, key=len)
 
 
@@ -185,7 +197,7 @@ def charts(frame, out, label):
         unit = '%' if scale == 100 else 'x'
         fig, ax = plt.subplots(figsize=(10, 6))
         ax.plot(med.index, med * scale, color='#2465a4', marker='o', linewidth=2)
-        ax.set(title=f'{label.title()}: median {names[metric].lower()} by year',
+        ax.set(title=f'{clean.iloc[0].company_name if clean.ticker.nunique() == 1 else label.title() + " sample median"}: {names[metric].lower()}',
                xlabel='Fiscal year', ylabel=f'{names[metric]} ({unit})')
         ax.set_xticks(list(years))
         ax.axhline(0, color='gray', linewidth=.7)
@@ -193,7 +205,7 @@ def charts(frame, out, label):
         ax.margins(y=.25)
         for year, value in med.dropna().items():
             n = int(grouped.count().loc[year])
-            ax.annotate(f'{value * scale:.1f}{unit}\n{n} companies',
+            ax.annotate(f'{value * scale:.2f}{unit}\n{n} ' + ('company' if n == 1 else 'companies'),
                         (year, value * scale), xytext=(0, 10),
                         textcoords='offset points', ha='center', fontsize=9)
             summary.append(dict(fiscal_year=year, metric=metric, median=value,

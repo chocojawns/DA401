@@ -4,7 +4,7 @@
 
 `HealthcareStats.py` is the new SEC collection, DuPont calculation, Item 1A extraction, and graphing program. It defaults to healthcare. It makes no OpenAI requests. A later, separate program will analyze the staged JSONL after source validation. Earlier API drafts remain preliminary examples, not part of this program.
 
-Seven offline tests pass, including synthetic SEC data through graph and JSONL generation. Live SEC verification is blocked in the current cloud environment by network policy (proxy CONNECT 403). Do not present synthetic test results as company findings or claim this program has been validated on the actual healthcare universe yet.
+Eight offline tests pass, including a regression for in-paragraph Item 1A cross-references. A live Pfizer FY2024 run also completed, producing financials, graphs, and 78,998 characters of Item 1A bounded by standalone section headings. The earlier 9,861-character extraction was incomplete and must be regenerated. This validates one company-year, not the entire healthcare universe. Financial values were checked for internal consistency; broader source auditing remains necessary.
 
 ## Run
 

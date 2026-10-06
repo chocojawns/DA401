@@ -60,6 +60,17 @@ class Tests(unittest.TestCase):
         self.assertNotIn('Unresolved',text)
         with self.assertRaises(ValueError): h.extract_item1a('<p>no risk section</p>')
 
+    def test_cross_references_do_not_truncate_risks(self):
+        first = 'Early pricing risk. ' * 40
+        last = 'Later operational risk. ' * 40
+        html = ('<h2>Item 1A. Risk Factors</h2><p>' + first +
+                'See Item 1A. Risk Factors for additional information.</p><p>' +
+                last + '</p><h2>Item 1C. Cybersecurity</h2>')
+        text = h.extract_item1a(html)
+        self.assertIn(first.strip(), text)
+        self.assertIn(last.strip(), text)
+        self.assertNotIn('Cybersecurity', text)
+
     def test_original_filing_and_cutoff(self):
         facts,filing,_=fixture()
         newer=dict(filing,accn='new',filed='2026-02-20',fy=2025,val=12)

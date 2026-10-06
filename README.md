@@ -241,7 +241,7 @@ Validation for this update: offline dry-run filtering, metadata rejection, and r
 
 Start with [HealthcareStats.py](HealthcareStats.py) for the new healthcare-only-by-default SEC/DuPont/Item 1A workflow. It creates auditable financial tables, dated Item 1A JSONL, coverage reports, and simple line/bar charts. It uses average balance-sheet denominators, unlike the legacy ending-balance scripts. It makes no OpenAI calls; that stage is deferred until these outputs are verified.
 
-Read the [methods, commands, limitations, and statistical research plan](docs/HealthcareStats-methods.md) before running or interpreting results. Offline synthetic tests pass; live SEC validation is pending network access. Do not describe this draft as validated on real company data yet.
+Read the [methods, commands, limitations, and statistical research plan](docs/HealthcareStats-methods.md) before running or interpreting results. Eight offline tests and one live Pfizer FY2024 run pass. Broader company/year validation remains pending. If your Pfizer FY2024 Item 1A contains only 9,861 characters, pull the extraction fix and regenerate it; the corrected extraction contains 78,998 characters.
 
 ### Windows: Beautiful Soup import or pip access-denied errors
 
