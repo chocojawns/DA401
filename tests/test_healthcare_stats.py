@@ -24,7 +24,7 @@ def fixture():
             if start: row['start']=start
             rows.append(row)
         facts['facts']['us-gaap'][tag]={'units':{'USD':rows}}
-    html='<html><ix:nonNumeric name="dei:DocumentFiscalYearFocus">2024</ix:nonNumeric><ix:nonNumeric name="dei:DocumentPeriodEndDate">2024-12-31</ix:nonNumeric><p>Item 1A. Risk Factors</p><p>Item 1B. Unresolved Staff Comments</p><h2>Item 1A. Risk Factors</h2><p>'+('Synthetic reimbursement and competition disclosure. '*30)+'</p><h2>Item 1B. Unresolved Staff Comments</h2></html>'
+    html='<html><ix:nonNumeric name="dei:DocumentFiscalYearFocus">2024</ix:nonNumeric><ix:nonNumeric name="dei:DocumentPeriodEndDate">2024-12-31</ix:nonNumeric><p>Item 1A. Risk Factors</p><p>Item 1B. Unresolved Staff Comments</p><h2>Item 1A. Risk Factors</h2><p>'+('Synthetic reimbursement and “competition” disclosure — café. '*30)+'</p><h2>Item 1B. Unresolved Staff Comments</h2></html>'
     submission='<DOCUMENT>\n<TYPE>10-K\n<TEXT>'+html+'</TEXT></DOCUMENT>'
     return facts,filing,submission
 
@@ -84,15 +84,24 @@ class Tests(unittest.TestCase):
             urls={'https://data.sec.gov/api/xbrl/companyfacts/CIK0000078003.json':json.dumps(facts),
                   'https://www.sec.gov/Archives/edgar/data/78003/000000000125000001/0000000001-25-000001.txt':sub}
             for url,text in urls.items():
-                (cache/(h.hashlib.sha256(url.encode()).hexdigest()+'.txt')).write_text(text)
-            result=subprocess.run([sys.executable,str(h.ROOT/'HealthcareStats.py'),'--offline','--tickers','PFE',
+                (cache/(h.hashlib.sha256(url.encode()).hexdigest()+'.txt')).write_text(text, encoding='utf-8')
+            # Emulate Windows' legacy default even when running tests on Linux.
+            bootstrap = (
+                "import pathlib,runpy,sys; original=pathlib.Path.read_text; "
+                "pathlib.Path.read_text=lambda self,encoding=None,errors=None: "
+                "original(self,encoding=encoding or 'cp1252',errors=errors); "
+                "sys.argv=sys.argv[1:]; runpy.run_path(sys.argv[0],run_name='__main__')"
+            )
+            result=subprocess.run([sys.executable,'-c',bootstrap,str(h.ROOT/'HealthcareStats.py'),'--offline','--tickers','PFE',
                                    '--start-year','2024','--end-year','2024','--cutoff','2025-12-31',
                                    '--cache',str(cache),'--output',str(root/'results')],capture_output=True,text=True)
             self.assertEqual(result.returncode,0,result.stderr)
             run=next((root/'results').iterdir())
             for name in ['financials.csv','coverage.csv','retrieval_status.csv','roe_trend.png','profit_margin_trend.png','asset_turnover_trend.png','equity_multiplier_trend.png','company_roe_2024_1.png']:
                 self.assertGreater((run/name).stat().st_size,0)
-            record=json.loads((run/'staged_10k_batch.jsonl').read_text())
+            record=json.loads((run/'staged_10k_batch.jsonl').read_text(encoding='utf-8'))
+            self.assertIn('“competition” disclosure — café', record['item_1a_text'])
+            self.assertTrue((run/'manifest.json').is_file())
             self.assertEqual(record['fiscal_year'],2024)
             self.assertEqual(record['filing_date'],'2025-02-20')
             self.assertEqual(len(h.pd.read_csv(run/'financials.csv')),1)

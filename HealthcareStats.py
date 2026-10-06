@@ -339,7 +339,7 @@ def main():
         pairs['strictly_preperiod_disclosure'] = pairs.filing_date < pairs.next_period_start
         pairs.to_csv(out/'next_year_research_pairs.csv', index=False)
         charts(frame, out, args.sector)
-    extracted = [json.loads(line) for line in (out/'staged_10k_batch.jsonl').read_text().splitlines() if line.strip()]
+    extracted = [json.loads(line) for line in (out/'staged_10k_batch.jsonl').read_text(encoding='utf-8').splitlines() if line.strip()]
     if extracted:
         item_keys = pd.DataFrame(extracted)[['ticker','fiscal_year']].drop_duplicates()
         coverage = coverage.merge(item_keys.assign(item1a_available=True), how='left').fillna({'item1a_available':False})
@@ -351,7 +351,7 @@ def main():
         csv_sha256=hashlib.sha256(company_file.read_bytes()).hexdigest(),
         script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         financial_rows=len(frame), original_filings_only=True,
-        note='Unbalanced descriptive panel; no causal inference. Review coverage and extraction manually.'), indent=2))
+        note='Unbalanced descriptive panel; no causal inference. Review coverage and extraction manually.'), indent=2), encoding='utf-8')
     print(f'Saved {len(frame)} financial company-years to {out}')
     if frame.empty:
         raise SystemExit('No usable financial rows; inspect retrieval_status.csv. Run is not validated.')
