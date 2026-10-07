@@ -23,3 +23,5 @@ python HealthcareTopBottomAI.py --execute
 ```
 
 Outputs: healthcare/results/top_bottom_ai/comparison_report.md, analyses.jsonl, responses.jsonl and plan.json. Do not commit keys. Quote checks establish textual support, not validity of every AI interpretation. No numeric severity scores or causal estimates are requested. Results require human review and will not by themselves complete the missing industrial assignment components.
+
+If OPENAI_API_KEY is not set, --execute now prompts for a hidden key directly. Paste it and press Enter; no characters appearing is normal. The key stays in process memory and is not written to a file.

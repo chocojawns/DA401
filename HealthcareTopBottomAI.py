@@ -1,5 +1,5 @@
 """Compare 2025 healthcare ROE extremes with supplied Item 1A; dry-run by default."""
-import argparse,json,os
+import argparse,json,os,getpass
 from pathlib import Path
 from AIResearch import INSTRUCTIONS,chunks,digest,schema,normalize,append
 ROOT=Path(__file__).resolve().parent
@@ -17,9 +17,15 @@ def main():
  pending=[(k,v) for k,v in tasks if k not in done];plan=dict(companies=len(records),total_chunks=len(tasks),pending_chunks=len(pending),model=a.model,question=QUESTION,missing='ZBH: automatic Item 1A extraction failed; not silently substituted',execute=a.execute)
  (a.output/'plan.json').write_text(json.dumps(plan,indent=2));print(json.dumps(plan,indent=2))
  if not a.execute:print('Dry run: no API calls. Add --execute to run.');return
- if not os.getenv('OPENAI_API_KEY'):raise SystemExit('OPENAI_API_KEY is not configured. Set it securely in this terminal; never put it in GitHub or chat.')
+ api_key=os.getenv('OPENAI_API_KEY','').strip()
+ if not api_key:
+  try:
+   api_key=getpass.getpass('Paste your OpenAI API key (hidden), then press Enter: ').strip()
+  except (EOFError,KeyboardInterrupt):
+   raise SystemExit('Key entry cancelled. No API requests made.')
+ if not api_key:raise SystemExit('No API key entered. No API requests made.')
  from openai import OpenAI
- client=OpenAI(timeout=120,max_retries=0)
+ client=OpenAI(api_key=api_key,timeout=120,max_retries=0)
  lock=a.output/'.running.lock';fd=os.open(lock,os.O_CREAT|os.O_EXCL|os.O_WRONLY);os.close(fd)
  try:
   for key,evidence in pending:
