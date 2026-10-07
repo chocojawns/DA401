@@ -62,3 +62,13 @@ verified realized savings.
 - Stay within 10 slides for the entire team. Do not append another full deck.
 - Do not call provisional evidence a validated sector-wide statistical finding.
 - Original industrial scripts and files were not modified.
+
+## Expanded healthcare coverage
+
+The deck now shows all four components over 2020–2025 for the same 40 companies, six annual scatter plots covering all 43 eligible companies (255 observations), and all five annual DuPont bridges. The 43-company heatmap is a separate detailed handout. The professor's 45 is a target, not the verified eligible count here.
+
+Each firm-level bridge averages the incremental contribution of each factor across all six replacement orders. Sector contributions are equal-weight means of the 40 firm contributions. They sum to the change in mean ROE, not median ROE. Values are in percentage points. 2025 contributions: margin +4.340, turnover +0.647, multiplier −1.141; net +3.847 pp (rounding applies). This allocates accounting changes; it does not estimate event causality.
+
+The industrial risk score 5 is an AI output, not a financial calculation. The supplied prompt has an example value 5 without an anchored severity rubric. All 472 saved outputs equal 5; the reason is unverified. Zero variance prevents a severity–ROE correlation. Treat this as a measurement limitation, not evidence of moderate risk.
+
+New dataframes retain source URLs and accession numbers. Eligibility requires at least five unflagged observed years. No missing year is imputed. The 40-company balanced panel additionally requires all six years. The retained population excludes some equity cases and is not the full healthcare sector. Source differences from older average-balance charts must not be combined.

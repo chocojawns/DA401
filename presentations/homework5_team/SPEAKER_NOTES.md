@@ -8,14 +8,13 @@ Introduce both team members. Explain that the briefing distinguishes observed ra
 
 Use the year-end-balance dataset only. 318 matched company-years exist across 56 firms; 49 have five matched years, 47 have six, and 43 have five unflagged equity years. The main 2025 cross-section has 41 observations. Source: recovered homework_basis/financials.csv. Industry-wide four-component comparison remains incomplete without the industrial raw input table. Changes in medians are not medians of within-firm changes.
 
-## Slide 3: A higher ROE can reverse the ranking of asset returns
+## Slide 3: Look across every year before selecting individual examples
 
-2025 Amgen ROE: $7.711bn / $8.658bn = 89.06%. Its net income/assets is about 8.51%, versus IDEXX about 31.62%. The comparison is accounting ROA, not operating income/assets. ROE = margin × turnover × multiplier. Equity multipliers are not debt-to-equity ratios. Do not infer why equity became small without a rollforward. HCA provides a warning case: positive income $6.784bn / negative equity $6.027bn = negative 112.56% ROE, which does not indicate a net loss.
+255 eligible company-years; 43 distinct firms. Missing or flagged years are not imputed. Scatter x = net income / year-end assets; y = net income / year-end equity. Their ratio is the equity multiplier. This is a mechanical relationship, not an independent causal test. A company appears in multiple panels: observations are dependent. Full ticker-by-year values are in roe_all_years_percent.csv and all_company_years.png. The previous Amgen/IDEXX pair was illustrative, not the entire analyzed sample.
 
-## Slide 4: Pfizer: investigate the margin and turnover decline together
+## Slide 4: Across the same 40 firms, margin contributes most to the 2025 rebound
 
-Source: Pfizer 2023 10-K, https://www.sec.gov/Archives/edgar/data/78003/000007800324000039/0000078003-24-000039.txt
-The filing states reduced COVID-product demand has led to reduced revenues/excess inventory and significant Paxlovid/Comirnaty write-offs in 2023. The chart uses current recovered year-end values, not older average-balance ratios. Contributions average all six orders of replacing the three DuPont factors and sum exactly to the observed ROE change. The acquisition of Seagen is an additional asset-base issue. The graph does not estimate how many ROE points were caused by a particular disclosed event.
+For each firm and consecutive year, replace margin, turnover and multiplier in all six possible orders; average each factor’s incremental contribution. Then average firm contributions equally across the same 40 companies. Contributions sum exactly to the change in mean ROE. This is NOT a decomposition of median ROE. The 2021 increase is predominantly margin; all three components contribute negatively in 2023. Firm-level contributions and aggregate means are supplied as CSV. To investigate causes, use company disclosures: Pfizer 2023 discusses lower COVID demand, inventory write-offs and Seagen acquisition, but this does not establish the sector-wide causal effect. Source: https://www.sec.gov/Archives/edgar/data/78003/000007800324000039/0000078003-24-000039.txt
 
 ## Slide 5: 3M: persistent exposure is not the same as current disruption
 
