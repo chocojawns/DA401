@@ -20,3 +20,5 @@ your DA401 repository. The files appear under
 `healthcare/reports/homework4_recovered/`.
 
 For reproducibility see [the audit guide](../../../docs/Homework4CoverageAudit-guide.md).
+
+For a single command to analyze this data, see [Healthcare workflow](../../WORKFLOW.md).

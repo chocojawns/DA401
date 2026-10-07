@@ -1,0 +1,1778 @@
+{
+  "sector": "healthcare",
+  "status": "Quantitative analysis; no AI interpretation",
+  "source_directory": "healthcare/reports/homework4_recovered/homework_basis",
+  "financials_sha256": "255689c90003c03607ce0f76e33531a266d4a083689eaf7ba9a0076bf6778584",
+  "method": {
+    "cutoff": "2026-09-23",
+    "years": [
+      2020,
+      2025
+    ],
+    "mode": "Legacy method reconciliation; candidates require accounting review",
+    "denominator": "Year-end assets and parent equity; not averages",
+    "filing_selection": "Latest same-accession comparative quantities before cutoff; not information available at period end",
+    "cache_sha256": {
+      "ABT": "5d751f73769f5c0a1f9bee0de16cb39d8961cf3f1ebb5558d555bb2678afb4ff",
+      "ABBV": "1fa00a2de3a0434fb2ebba8b1678cc379b16dc435a4f3e5c696efb7f9029698a",
+      "A": "c1dc449b186de4294c8dbdbb9e3b0f74eee3628c3fc5836652ff7ab8c2040ac9",
+      "ALGN": "5ad933a808d717ac885a7e416d10b9cce8fc1b0abd920234d9695307ca2f832f",
+      "AMGN": "fdf5906752dbed7151b14f5e765db25e75393cedef4a2582d976623b49e2e4c7",
+      "BAX": "98f10c840740ee257cb08b485f7842d702890e9b7ef20df2e3673fca2bb12297",
+      "BDX": "2412ff584fd74aa61f919bc5813a0bb523fdf03f20d6104f3167cc19c3ba84b9",
+      "TECH": "5f064cd631289049236c7ddafd76f1bc2824b0b55936587bf5e0bb2cc7a0f677",
+      "BIIB": "e49b5a3bbf14de0fb7d239cc7824bd2fd0df6e7d76ccea2ef08421f0f26763e0",
+      "BSX": "06fbd22345eaba9b752251c5e485a8a67a53a54d553376a44919d4724a40c786",
+      "BMY": "a18ba88ed8f92b7f0cbc4d83a6db14b8fba95a5721f7f83a6306ca843ad40c2f",
+      "CAH": "194e5c99b43f403ca00a341eb7f330b5343e481f1d31148aa68f7f10bb6dec5d",
+      "COR": "3dc134357c7d7cb1acfe534c4f2086a82e61b4c9367c091507c66b9efb8c863c",
+      "CNC": "f060d4edfcc65500cb96b3dbb7b96910f905abb8bfaa2674ec2b95a5fc325412",
+      "CRL": "22884da0d898a58bf99c4f5d4c2de6e1fe324d32bdaa4d1b1ffb0a2a61e1a4cd",
+      "CI": "06975e153efb2f8d174088c59762b86507fab3a97aa14de13861c58a1585c697",
+      "COO": "6afb43201133dcb934decf48b1a099835969d31c57f5c77aee2cfddab0f0caa4",
+      "CVS": "5c08d55a669ee073f26bb7dc68826076bf640f0a2b5ac5b2161408f67f96e3ff",
+      "DHR": "4a686be88c501054fa141624a0b0cf61d46be16390113a430631f8f11f5a1cf0",
+      "DVA": "b07a8bd0a807cb92d1ace1e4d6f3b566bc65733dbd8322b4be82ad6cdf12867f",
+      "DXCM": "f0b2cf49d2b134e3515bb193a36e6dd32858eb179fe55c6b56af8f33873f3956",
+      "EW": "5e8f751fbec9a0a1ff653c4d2070ea46d6cde3f7ccf35f9c1d7367a126bc76c1",
+      "ELV": "91c27b3776dfc6c81092359fbf01b326e9805832cf55ebe91c96e9d57f5481a0",
+      "GEHC": "670aeb159a39f3b0c930fc2b13b5fdc5907dd1dd696ac74e900838717cbbee57",
+      "GILD": "5703fd84d6e3d00697ac60bc3d7ded9306be2a9f36170a342858b8e6417506f0",
+      "HCA": "1dd9e5ce23f330228b212385f04a44a5a303622fc026c82d9edda66092dcb49a",
+      "HSIC": "50148e36e397577fc93db58179bb339de4eb49591361390427b10df5e6e9c4e4",
+      "HUM": "3de80abe289855e19c6a0e9391e064ac0ab98360cd394d602873a0ae9ae2d326",
+      "IDXX": "0e6062dd20371329a7570315c03bbe5ae0b5c7ae89af18e7309e1b26e3ab4260",
+      "INCY": "9bbd2db86b80214c3617ff9f7074d096505585c04e7f1cb88ed756d013c45641",
+      "PODD": "6584a0c4ea0b5c1a6bd593893ae4b27b3d0ac6340c3e20d635b8488d32e2ebea",
+      "ISRG": "b386a39dc2989008a01e4be5e12444e330e3a98b86c714e3b063b246235db44b",
+      "IQV": "70859cc9dcf4dfc30768c753d394b5f5bd69800d5e7753308315302240f9d56e",
+      "JNJ": "7141c0c988fa1d30f779687b4c78ab561e19aa5990a58ad86a66467d0a783980",
+      "LH": "870099f23ed7598e05f405c7b5db78de7f4e413de290bf898fe02180fd87bdd8",
+      "LLY": "3fe29099e6efaef9acac95711c271de1a644602939ea18487e29708310985942",
+      "MCK": "435891f1a2c1f818252726af1c515add6885f06b80cc11aceeffc620f32c103d",
+      "MDT": "38fb8ec4139e6db2fa9bcd6cce1c3de5d9fcb3838ad9a63a2e3c74a7afc79b27",
+      "MRK": "de2e92301923703e6aee247c42c0cf2f1b741118ebca221fbaa5dc0e47644bd7",
+      "MTD": "96802dbb20a5201bd0b672df752020b95041823f06bb80399a4ee58971f0933d",
+      "MRNA": "12a0739e5dd00db86b0090739fb41774c5eebf2739f333839f0b619541a28262",
+      "PFE": "bd072131f9dcf001f22e843fded5910c2c7fc178e2a739ce0c58b1934e84d566",
+      "DGX": "adbcd1ab76a0f4e97550d23fe491dd7925c24a4e382bdc83c78850bdff87d14f",
+      "REGN": "8ac8537cd8b5e571e7f527aae3e223c6a7cdab1260fd8035e278ac184b4901b4",
+      "RMD": "2664f0a1dbcfc0fb3f29346b16307f399581c30a040cf6bd5f70c53f3e93763d",
+      "RVTY": "f45a596a61b554e66a7d360f5a1dc23d1b6e311b51445a0169ead135a00d3ab1",
+      "SOLV": "02100e853f2616317101c764e99185bc5abae3f71b4d25258d43e1982f99c303",
+      "STE": "1e7f3150c0cae1f0b976f5424b71c1ee51584399ee4162841d6db8063319b089",
+      "SYK": "bad750877f22f14d07b23936d4750cb56275f184b0766a02336d59abef077666",
+      "TMO": "4d98ebd4c91521f5d90f032834b8dec04f78b30758a214be33e6cbba68fa766a",
+      "UNH": "6c9dff59732b7c597542b2d5eadaae0313ca0de03defdba2c00203e693632d76",
+      "UHS": "28b3be74d323b7cd7c28559ef0b22713d4354cb39b348fd66abc292bc903b1de",
+      "VEEV": "c2624d24b7f8e7939be966eb22c27d2d0b6f1b361bf51656bff51b88a4588804",
+      "VRTX": "3f73be48f9279b6b1c07339b9c5ea0e2a7f5d757cd6f8c4015e141ec7ed8e4b8",
+      "VTRS": "f571b7cae2539ee573b69694e8028858b328b92cb38cc4c27fc4a6082aba440a",
+      "WAT": "f36772e3c932728e55fc7b158a25d0ab2189ad8ffc3a3e02408c7bfd3ae0b8ed",
+      "WST": "c3a7f52d8bbdb9a06145973d83c1f4190a4d6619d572e4e3ede7677b74c530b5",
+      "ZBH": "b0d94fd0d04415e1186c4cd88ea979b5075083c5846391ee1ffe80f41319afd2",
+      "ZTS": "b07a62edd0c62eecc2fb932a17063b7f406b6355ca6ec9a658407a39c1b87445"
+    },
+    "program_sha256": "f1d5a5020a6115b8047f42eb6c81ea0bf67fb759582a732cc79237fef87894ec",
+    "legacy_program_sha256": "e05c17b11329eab2a0aa69d532128e5c0757aaeffd7084a89895b1783d091f6b",
+    "five_year_candidates": 49,
+    "six_year_candidates": 47,
+    "five_unflagged_year_candidates": 43,
+    "companies": [
+      "ABT",
+      "ABBV",
+      "A",
+      "ALGN",
+      "AMGN",
+      "BAX",
+      "BDX",
+      "TECH",
+      "BIIB",
+      "BSX",
+      "BMY",
+      "CAH",
+      "COR",
+      "CNC",
+      "CRL",
+      "CI",
+      "COO",
+      "CVS",
+      "DHR",
+      "DVA",
+      "DXCM",
+      "EW",
+      "ELV",
+      "GEHC",
+      "GILD",
+      "HCA",
+      "HSIC",
+      "HUM",
+      "IDXX",
+      "INCY",
+      "PODD",
+      "ISRG",
+      "IQV",
+      "JNJ",
+      "LH",
+      "LLY",
+      "MCK",
+      "MDT",
+      "MRK",
+      "MTD",
+      "MRNA",
+      "PFE",
+      "DGX",
+      "REGN",
+      "RMD",
+      "RVTY",
+      "SOLV",
+      "STE",
+      "SYK",
+      "TMO",
+      "UNH",
+      "UHS",
+      "VEEV",
+      "VRTX",
+      "VTRS",
+      "WAT",
+      "WST",
+      "ZBH",
+      "ZTS"
+    ],
+    "sector": "healthcare",
+    "original_filings_only": false,
+    "note": "Homework year-end basis; later comparative data. Not suitable for a point-in-time predictive study."
+  },
+  "included_company_count": 43,
+  "included_companies": [
+    "A",
+    "ABBV",
+    "ABT",
+    "ALGN",
+    "AMGN",
+    "BAX",
+    "BDX",
+    "BMY",
+    "CI",
+    "CNC",
+    "COO",
+    "CRL",
+    "CVS",
+    "DGX",
+    "DHR",
+    "DXCM",
+    "ELV",
+    "GILD",
+    "HSIC",
+    "HUM",
+    "IDXX",
+    "INCY",
+    "ISRG",
+    "LH",
+    "LLY",
+    "MDT",
+    "MRK",
+    "MRNA",
+    "PFE",
+    "PODD",
+    "REGN",
+    "RMD",
+    "RVTY",
+    "STE",
+    "TECH",
+    "TMO",
+    "UHS",
+    "UNH",
+    "VEEV",
+    "VRTX",
+    "WST",
+    "ZBH",
+    "ZTS"
+  ],
+  "requested_companies_without_financial_rows": [
+    "JNJ",
+    "SYK",
+    "VTRS"
+  ],
+  "eligibility": [
+    {
+      "ticker": "A",
+      "usable_years": "5",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "ABBV",
+      "usable_years": "5",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "ABT",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "ALGN",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "AMGN",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "BAX",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "BDX",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "BIIB",
+      "usable_years": "4",
+      "included": "False",
+      "reason": "Fewer than 5 usable fiscal years"
+    },
+    {
+      "ticker": "BMY",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "BSX",
+      "usable_years": "4",
+      "included": "False",
+      "reason": "Fewer than 5 usable fiscal years"
+    },
+    {
+      "ticker": "CAH",
+      "usable_years": "2",
+      "included": "False",
+      "reason": "Fewer than 5 usable fiscal years"
+    },
+    {
+      "ticker": "CI",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "CNC",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "COO",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "COR",
+      "usable_years": "1",
+      "included": "False",
+      "reason": "Fewer than 5 usable fiscal years"
+    },
+    {
+      "ticker": "CRL",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "CVS",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "DGX",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "DHR",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "DVA",
+      "usable_years": "4",
+      "included": "False",
+      "reason": "Fewer than 5 usable fiscal years"
+    },
+    {
+      "ticker": "DXCM",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "ELV",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "EW",
+      "usable_years": "4",
+      "included": "False",
+      "reason": "Fewer than 5 usable fiscal years"
+    },
+    {
+      "ticker": "GEHC",
+      "usable_years": "4",
+      "included": "False",
+      "reason": "Fewer than 5 usable fiscal years"
+    },
+    {
+      "ticker": "GILD",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "HCA",
+      "usable_years": "1",
+      "included": "False",
+      "reason": "Fewer than 5 usable fiscal years"
+    },
+    {
+      "ticker": "HSIC",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "HUM",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "IDXX",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "INCY",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "IQV",
+      "usable_years": "4",
+      "included": "False",
+      "reason": "Fewer than 5 usable fiscal years"
+    },
+    {
+      "ticker": "ISRG",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "LH",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "LLY",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "MCK",
+      "usable_years": "1",
+      "included": "False",
+      "reason": "Fewer than 5 usable fiscal years"
+    },
+    {
+      "ticker": "MDT",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "MRK",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "MRNA",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "MTD",
+      "usable_years": "2",
+      "included": "False",
+      "reason": "Fewer than 5 usable fiscal years"
+    },
+    {
+      "ticker": "PFE",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "PODD",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "REGN",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "RMD",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "RVTY",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "SOLV",
+      "usable_years": "3",
+      "included": "False",
+      "reason": "Fewer than 5 usable fiscal years"
+    },
+    {
+      "ticker": "STE",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "TECH",
+      "usable_years": "5",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "TMO",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "UHS",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "UNH",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "VEEV",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "VRTX",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "WAT",
+      "usable_years": "3",
+      "included": "False",
+      "reason": "Fewer than 5 usable fiscal years"
+    },
+    {
+      "ticker": "WST",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "ZBH",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    },
+    {
+      "ticker": "ZTS",
+      "usable_years": "6",
+      "included": "True",
+      "reason": ""
+    }
+  ],
+  "company_averages": [
+    {
+      "ticker": "A",
+      "profit_margin": "0.18832329484236196",
+      "asset_turnover": "0.5941665091221713",
+      "equity_multiplier": "1.9419259897919328",
+      "roe": "0.21698055681389516",
+      "years_available": "5",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "ABBV",
+      "profit_margin": "0.13510185272490668",
+      "asset_turnover": "0.38519749274341125",
+      "equity_multiplier": "16.544451023102233",
+      "roe": "0.7088216958154053",
+      "years_available": "5",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "ABT",
+      "profit_margin": "0.1770328087721781",
+      "asset_turnover": "0.5351017024217809",
+      "equity_multiplier": "1.9350608076606866",
+      "roe": "0.1796954390100022",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "ALGN",
+      "profit_margin": "0.22214191451381718",
+      "asset_turnover": "0.6217493229131071",
+      "equity_multiplier": "1.6023205933757778",
+      "roe": "0.1993293968534858",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "AMGN",
+      "profit_margin": "0.2219866185545248",
+      "asset_turnover": "0.382107344232318",
+      "equity_multiplier": "12.54768989882615",
+      "roe": "1.0176054662167566",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "BAX",
+      "profit_margin": "0.022893276237927685",
+      "asset_turnover": "0.46947775465127145",
+      "equity_multiplier": "3.531017584910156",
+      "roe": "-0.0136745635714784",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "BDX",
+      "profit_margin": "0.08210386222279185",
+      "asset_turnover": "0.3570959471097999",
+      "equity_multiplier": "2.1798769328042034",
+      "roe": "0.0641619470728933",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "BMY",
+      "profit_margin": "0.03587347944945248",
+      "asset_turnover": "0.4649563388611549",
+      "equity_multiplier": "3.844529195771308",
+      "roe": "0.04444449062604763",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "CI",
+      "profit_margin": "0.030449878239859965",
+      "asset_turnover": "1.3357755649722602",
+      "equity_multiplier": "3.4145337730340386",
+      "roe": "0.12837287549651163",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "CNC",
+      "profit_margin": "0.006471176097472317",
+      "asset_turnover": "1.906677678116172",
+      "equity_multiplier": "3.1717224888711395",
+      "roe": "0.010934781033654714",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "COO",
+      "profit_margin": "0.24941223527693776",
+      "asset_turnover": "0.3179307591925647",
+      "equity_multiplier": "1.5532118037822036",
+      "roe": "0.11221723292006858",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "CRL",
+      "profit_margin": "0.07363293408531013",
+      "asset_turnover": "0.5273455916499012",
+      "equity_multiplier": "2.4383618123739663",
+      "roe": "0.09710829373691722",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "CVS",
+      "profit_margin": "0.01787665538309668",
+      "asset_turnover": "1.3869637459879975",
+      "equity_multiplier": "3.268448704893043",
+      "roe": "0.07713986886694187",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "DGX",
+      "profit_margin": "0.11711904693750137",
+      "asset_turnover": "0.6977332380221241",
+      "equity_multiplier": "2.205833332444407",
+      "roe": "0.18068346845903535",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "DHR",
+      "profit_margin": "0.1937388951797705",
+      "asset_turnover": "0.30792297080899833",
+      "equity_multiplier": "1.695783472077985",
+      "roe": "0.10243669705069264",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "DXCM",
+      "profit_margin": "0.1556302669105574",
+      "asset_turnover": "0.5700963574216669",
+      "equity_multiplier": "2.6191991285899068",
+      "roe": "0.2294792248511267",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "ELV",
+      "profit_margin": "0.03605710833911992",
+      "asset_turnover": "1.5132949976692247",
+      "equity_multiplier": "2.7526664320819627",
+      "roe": "0.14928335172796423",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "GILD",
+      "profit_margin": "0.1526546826194378",
+      "asset_turnover": "0.43621869917070266",
+      "equity_multiplier": "3.0550335433042064",
+      "roe": "0.19436485773724788",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "HSIC",
+      "profit_margin": "0.038000523147072585",
+      "asset_turnover": "1.3027275781604344",
+      "equity_multiplier": "2.7759397644798036",
+      "roe": "0.1353945663818112",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "HUM",
+      "profit_margin": "0.025329019624264617",
+      "asset_turnover": "2.2801484588705185",
+      "equity_multiplier": "2.7700700940629166",
+      "roe": "0.15083013456051705",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "IDXX",
+      "profit_margin": "0.2255116475480079",
+      "asset_turnover": "1.2192715563041239",
+      "equity_multiplier": "3.0036944335228366",
+      "roe": "0.8168659780553732",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "INCY",
+      "profit_margin": "0.12112821032388876",
+      "asset_turnover": "0.6663675603479533",
+      "equity_multiplier": "1.3735459380181283",
+      "roe": "0.09832066300532345",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "ISRG",
+      "profit_margin": "0.26143594404598475",
+      "asset_turnover": "0.4483316949181888",
+      "equity_multiplier": "1.1517265188366947",
+      "roe": "0.13477422825494276",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "LH",
+      "profit_margin": "0.08685701518070982",
+      "asset_turnover": "0.7115616736187788",
+      "equity_multiplier": "2.1079331499982144",
+      "roe": "0.12839991372471227",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "LLY",
+      "profit_margin": "0.22894017655904828",
+      "asset_turnover": "0.5613376518295642",
+      "equity_multiplier": "5.674082657693796",
+      "roe": "0.7187009939569328",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "MDT",
+      "profit_margin": "0.13622255215978796",
+      "asset_turnover": "0.34324437840104755",
+      "equity_multiplier": "1.7993749701455137",
+      "roe": "0.08394534446627748",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "MRK",
+      "profit_margin": "0.2061096314372577",
+      "asset_turnover": "0.507279616727899",
+      "equity_multiplier": "2.788000875570979",
+      "roe": "0.2771455899196275",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "MRNA",
+      "profit_margin": "-0.5126694748375726",
+      "asset_turnover": "0.3935307815309009",
+      "equity_multiplier": "1.6691303748586257",
+      "roe": "0.0025092885438178225",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "PFE",
+      "profit_margin": "0.18149198549909717",
+      "asset_turnover": "0.3480776112431054",
+      "equity_multiplier": "2.370354895506052",
+      "roe": "0.1603669297803813",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "PODD",
+      "profit_margin": "0.07350976848945136",
+      "asset_turnover": "0.6290842993311613",
+      "equity_multiplier": "3.2829129701919713",
+      "roe": "0.14016818476813775",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "REGN",
+      "profit_margin": "0.3664176306893967",
+      "asset_turnover": "0.44498400191622545",
+      "equity_multiplier": "1.3430830989101021",
+      "roe": "0.23116540031622768",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "RMD",
+      "profit_margin": "0.21318762462965637",
+      "asset_turnover": "0.659947576539461",
+      "equity_multiplier": "1.5682277089053442",
+      "roe": "0.21787722173101018",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "RVTY",
+      "profit_margin": "0.174209801012394",
+      "asset_turnover": "0.27076037588961815",
+      "equity_multiplier": "1.8605153083372123",
+      "roe": "0.09343244216121703",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "STE",
+      "profit_margin": "0.08755851159871235",
+      "asset_turnover": "0.47546448762290866",
+      "equity_multiplier": "1.6855658881123172",
+      "roe": "0.07169086172919133",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "TECH",
+      "profit_margin": "0.22065572984412948",
+      "asset_turnover": "0.42339519381766594",
+      "equity_multiplier": "1.3826178639056745",
+      "roe": "0.1284054763296604",
+      "years_available": "5",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "TMO",
+      "profit_margin": "0.16461766349290216",
+      "asset_turnover": "0.4365977026818517",
+      "equity_multiplier": "2.113898143130404",
+      "roe": "0.15228591142372985",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "UHS",
+      "profit_margin": "0.06977885876033753",
+      "asset_turnover": "1.0084786436791522",
+      "equity_multiplier": "2.189831121811413",
+      "roe": "0.1531756464795403",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "UNH",
+      "profit_margin": "0.05086993233894554",
+      "asset_turnover": "1.3538853728009441",
+      "equity_multiplier": "3.1202626332363708",
+      "roe": "0.21175045487354663",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "VEEV",
+      "profit_margin": "0.24529205413200392",
+      "asset_turnover": "0.44576298556272453",
+      "equity_multiplier": "1.3070964071106008",
+      "roe": "0.1436844068972397",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "VRTX",
+      "profit_margin": "0.2942849837828115",
+      "asset_turnover": "0.4958731995767061",
+      "equity_multiplier": "1.3378848404021582",
+      "roe": "0.19464439427579627",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "WST",
+      "profit_margin": "0.18833139598578283",
+      "asset_turnover": "0.784239522838113",
+      "equity_multiplier": "1.3840877508440368",
+      "roe": "0.20556365655020858",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "ZBH",
+      "profit_margin": "0.06904030976137439",
+      "asset_turnover": "0.328001987730347",
+      "equity_multiplier": "1.8103735653496893",
+      "roe": "0.041607839957966",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    },
+    {
+      "ticker": "ZTS",
+      "profit_margin": "0.26571052028920533",
+      "asset_turnover": "0.5752607607930454",
+      "equity_multiplier": "3.42426354069907",
+      "roe": "0.5259344222214615",
+      "years_available": "6",
+      "subsector": "Unclassified"
+    }
+  ],
+  "company_outliers": [
+    {
+      "ticker": "MRNA",
+      "metric": "profit_margin",
+      "value": "-0.5126694748375726",
+      "lower": "-0.15185855520319946",
+      "upper": "0.43818981670094836"
+    },
+    {
+      "ticker": "CI",
+      "metric": "asset_turnover",
+      "value": "1.3357755649722602",
+      "lower": "0.01754618250478357",
+      "upper": "1.116908219809852"
+    },
+    {
+      "ticker": "CNC",
+      "metric": "asset_turnover",
+      "value": "1.906677678116172",
+      "lower": "0.01754618250478357",
+      "upper": "1.116908219809852"
+    },
+    {
+      "ticker": "CVS",
+      "metric": "asset_turnover",
+      "value": "1.3869637459879975",
+      "lower": "0.01754618250478357",
+      "upper": "1.116908219809852"
+    },
+    {
+      "ticker": "ELV",
+      "metric": "asset_turnover",
+      "value": "1.5132949976692247",
+      "lower": "0.01754618250478357",
+      "upper": "1.116908219809852"
+    },
+    {
+      "ticker": "HSIC",
+      "metric": "asset_turnover",
+      "value": "1.3027275781604344",
+      "lower": "0.01754618250478357",
+      "upper": "1.116908219809852"
+    },
+    {
+      "ticker": "HUM",
+      "metric": "asset_turnover",
+      "value": "2.2801484588705185",
+      "lower": "0.01754618250478357",
+      "upper": "1.116908219809852"
+    },
+    {
+      "ticker": "IDXX",
+      "metric": "asset_turnover",
+      "value": "1.2192715563041239",
+      "lower": "0.01754618250478357",
+      "upper": "1.116908219809852"
+    },
+    {
+      "ticker": "UNH",
+      "metric": "asset_turnover",
+      "value": "1.3538853728009441",
+      "lower": "0.01754618250478357",
+      "upper": "1.116908219809852"
+    },
+    {
+      "ticker": "ABBV",
+      "metric": "equity_multiplier",
+      "value": "16.544451023102233",
+      "lower": "-0.43810180369175433",
+      "upper": "5.203098023447515"
+    },
+    {
+      "ticker": "AMGN",
+      "metric": "equity_multiplier",
+      "value": "12.54768989882615",
+      "lower": "-0.43810180369175433",
+      "upper": "5.203098023447515"
+    },
+    {
+      "ticker": "LLY",
+      "metric": "equity_multiplier",
+      "value": "5.674082657693796",
+      "lower": "-0.43810180369175433",
+      "upper": "5.203098023447515"
+    },
+    {
+      "ticker": "ABBV",
+      "metric": "roe",
+      "value": "0.7088216958154053",
+      "lower": "-0.06869938764001556",
+      "upper": "0.3750709217230135"
+    },
+    {
+      "ticker": "AMGN",
+      "metric": "roe",
+      "value": "1.0176054662167566",
+      "lower": "-0.06869938764001556",
+      "upper": "0.3750709217230135"
+    },
+    {
+      "ticker": "IDXX",
+      "metric": "roe",
+      "value": "0.8168659780553732",
+      "lower": "-0.06869938764001556",
+      "upper": "0.3750709217230135"
+    },
+    {
+      "ticker": "LLY",
+      "metric": "roe",
+      "value": "0.7187009939569328",
+      "lower": "-0.06869938764001556",
+      "upper": "0.3750709217230135"
+    },
+    {
+      "ticker": "ZTS",
+      "metric": "roe",
+      "value": "0.5259344222214615",
+      "lower": "-0.06869938764001556",
+      "upper": "0.3750709217230135"
+    }
+  ],
+  "balanced_panel_medians": [
+    {
+      "fiscal_year": "2020",
+      "profit_margin": "0.1321922295883625",
+      "asset_turnover": "0.503448204878318",
+      "equity_multiplier": "2.2883507849631624",
+      "roe": "0.1571638121823695"
+    },
+    {
+      "fiscal_year": "2021",
+      "profit_margin": "0.174541620049878",
+      "asset_turnover": "0.5616552787920417",
+      "equity_multiplier": "2.303440497008073",
+      "roe": "0.1868021510059422"
+    },
+    {
+      "fiscal_year": "2022",
+      "profit_margin": "0.12967904496727217",
+      "asset_turnover": "0.5422285407126017",
+      "equity_multiplier": "2.1937486105717348",
+      "roe": "0.15904304999858965"
+    },
+    {
+      "fiscal_year": "2023",
+      "profit_margin": "0.1300236154721283",
+      "asset_turnover": "0.5390241073932595",
+      "equity_multiplier": "2.2095873565959563",
+      "roe": "0.1315951371500165"
+    },
+    {
+      "fiscal_year": "2024",
+      "profit_margin": "0.0994254887398697",
+      "asset_turnover": "0.5429566978706023",
+      "equity_multiplier": "2.193773243398871",
+      "roe": "0.11128454939301614"
+    },
+    {
+      "fiscal_year": "2025",
+      "profit_margin": "0.1183767246362517",
+      "asset_turnover": "0.5616987182570332",
+      "equity_multiplier": "2.1339590571675497",
+      "roe": "0.12681601246279844"
+    }
+  ],
+  "research_questions": [
+    {
+      "ticker": "MRNA",
+      "fiscal_year": 2021,
+      "subsector": "Unclassified",
+      "question": "What disclosed risks might relate to the +159.09 percentage-point profit-margin change at MRNA in 2021, and what evidence is needed to establish actual causes?",
+      "evidence": {
+        "profit_margin": 0.660603107574035,
+        "prior_profit_margin": -0.9302615193026152,
+        "roe": 0.862636974195829,
+        "prior_roe": -0.2916829363529871
+      },
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285223000011/0001682852-23-000011.txt",
+      "prior_source_url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285222000012/0001682852-22-000012.txt",
+      "interpretation": "Exploratory retrospective question, not evidence of causation or prediction."
+    },
+    {
+      "ticker": "MRNA",
+      "fiscal_year": 2023,
+      "subsector": "Unclassified",
+      "question": "What disclosed risks might relate to the -112.25 percentage-point profit-margin change at MRNA in 2023, and what evidence is needed to establish actual causes?",
+      "evidence": {
+        "profit_margin": -0.688376168224299,
+        "prior_profit_margin": 0.4340964543425219,
+        "roe": -0.3402627400028872,
+        "prior_roe": 0.4372744862207812
+      },
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285225000022/0001682852-25-000022.txt",
+      "prior_source_url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285224000015/0001682852-24-000015.txt",
+      "interpretation": "Exploratory retrospective question, not evidence of causation or prediction."
+    },
+    {
+      "ticker": "COO",
+      "fiscal_year": 2021,
+      "subsector": "Unclassified",
+      "question": "What disclosed risks might relate to the +90.95 percentage-point profit-margin change at COO in 2021, and what evidence is needed to establish actual causes?",
+      "evidence": {
+        "profit_margin": 1.00759623609923,
+        "prior_profit_margin": 0.0980706734131391,
+        "roe": 0.4241983347258636,
+        "prior_roe": 0.0623333159023165
+      },
+      "source_url": "https://www.sec.gov/Archives/edgar/data/711404/000071140422000053/0000711404-22-000053.txt",
+      "prior_source_url": "https://www.sec.gov/Archives/edgar/data/711404/000071140421000038/0000711404-21-000038.txt",
+      "interpretation": "Exploratory retrospective question, not evidence of causation or prediction."
+    },
+    {
+      "ticker": "COO",
+      "fiscal_year": 2022,
+      "subsector": "Unclassified",
+      "question": "What disclosed risks might relate to the -89.10 percentage-point profit-margin change at COO in 2022, and what evidence is needed to establish actual causes?",
+      "evidence": {
+        "profit_margin": 0.1166122597025752,
+        "prior_profit_margin": 1.00759623609923,
+        "roe": 0.0537737821450972,
+        "prior_roe": 0.4241983347258636
+      },
+      "source_url": "https://www.sec.gov/Archives/edgar/data/711404/000071140423000072/0000711404-23-000072.txt",
+      "prior_source_url": "https://www.sec.gov/Archives/edgar/data/711404/000071140422000053/0000711404-22-000053.txt",
+      "interpretation": "Exploratory retrospective question, not evidence of causation or prediction."
+    },
+    {
+      "ticker": "ALGN",
+      "fiscal_year": 2021,
+      "subsector": "Unclassified",
+      "question": "What disclosed risks might relate to the -52.31 percentage-point profit-margin change at ALGN in 2021, and what evidence is needed to establish actual causes?",
+      "evidence": {
+        "profit_margin": 0.1953203271581325,
+        "prior_profit_margin": 0.7184184412168413,
+        "roe": 0.2131054231716884,
+        "prior_roe": 0.5491534124028059
+      },
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1097149/000109714923000013/0001097149-23-000013.txt",
+      "prior_source_url": "https://www.sec.gov/Archives/edgar/data/1097149/000109714922000011/0001097149-22-000011.txt",
+      "interpretation": "Exploratory retrospective question, not evidence of causation or prediction."
+    },
+    {
+      "ticker": "INCY",
+      "fiscal_year": 2021,
+      "subsector": "Unclassified",
+      "question": "What disclosed risks might relate to the +42.85 percentage-point profit-margin change at INCY in 2021, and what evidence is needed to establish actual causes?",
+      "evidence": {
+        "profit_margin": 0.317647752193625,
+        "prior_profit_margin": -0.1108849057749984,
+        "roe": 0.2516127303843709,
+        "prior_roe": -0.1132388556057823
+      },
+      "source_url": "https://www.sec.gov/Archives/edgar/data/879169/000087916923000008/0000879169-23-000008.txt",
+      "prior_source_url": "https://www.sec.gov/Archives/edgar/data/879169/000155837022000902/0001558370-22-000902.txt",
+      "interpretation": "Exploratory retrospective question, not evidence of causation or prediction."
+    },
+    {
+      "ticker": "BAX",
+      "fiscal_year": 2023,
+      "subsector": "Unclassified",
+      "question": "What disclosed risks might relate to the +42.41 percentage-point profit-margin change at BAX in 2023, and what evidence is needed to establish actual causes?",
+      "evidence": {
+        "profit_margin": 0.2563706563706563,
+        "prior_profit_margin": -0.1677237005377085,
+        "roe": 0.3161152106641275,
+        "prior_roe": -0.4171095491170924
+      },
+      "source_url": "https://www.sec.gov/Archives/edgar/data/10456/000162828025007201/0001628280-25-007201.txt",
+      "prior_source_url": "https://www.sec.gov/Archives/edgar/data/10456/000162828024003932/0001628280-24-003932.txt",
+      "interpretation": "Exploratory retrospective question, not evidence of causation or prediction."
+    },
+    {
+      "ticker": "VRTX",
+      "fiscal_year": 2024,
+      "subsector": "Unclassified",
+      "question": "What disclosed risks might relate to the -41.54 percentage-point profit-margin change at VRTX in 2024, and what evidence is needed to establish actual causes?",
+      "evidence": {
+        "profit_margin": -0.0486020997994573,
+        "prior_profit_margin": 0.3667571839662789,
+        "roe": -0.032639430577223,
+        "prior_roe": 0.2058883756911105
+      },
+      "source_url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000056/0000875320-26-000056.txt",
+      "prior_source_url": "https://www.sec.gov/Archives/edgar/data/875320/000087532025000053/0000875320-25-000053.txt",
+      "interpretation": "Exploratory retrospective question, not evidence of causation or prediction."
+    },
+    {
+      "ticker": "MRNA",
+      "fiscal_year": 2024,
+      "subsector": "Unclassified",
+      "question": "What disclosed risks might relate to the -41.21 percentage-point profit-margin change at MRNA in 2024, and what evidence is needed to establish actual causes?",
+      "evidence": {
+        "profit_margin": -1.1004326328800988,
+        "prior_profit_margin": -0.688376168224299,
+        "roe": -0.3266672782313549,
+        "prior_roe": -0.3402627400028872
+      },
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000033/0001682852-26-000033.txt",
+      "prior_source_url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285225000022/0001682852-25-000022.txt",
+      "interpretation": "Exploratory retrospective question, not evidence of causation or prediction."
+    },
+    {
+      "ticker": "VRTX",
+      "fiscal_year": 2025,
+      "subsector": "Unclassified",
+      "question": "What disclosed risks might relate to the +37.80 percentage-point profit-margin change at VRTX in 2025, and what evidence is needed to establish actual causes?",
+      "evidence": {
+        "profit_margin": 0.3293976485880696,
+        "prior_profit_margin": -0.0486020997994573,
+        "roe": 0.2117884044616357,
+        "prior_roe": -0.032639430577223
+      },
+      "source_url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000056/0000875320-26-000056.txt",
+      "prior_source_url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000056/0000875320-26-000056.txt",
+      "interpretation": "Exploratory retrospective question, not evidence of causation or prediction."
+    }
+  ],
+  "limitations": [
+    "CSV-derived table cells are strings; ratios are decimals, not percentages.",
+    "Repeated company-years are dependent observations.",
+    "DuPont component correlations are mechanically related.",
+    "Cluster membership and risk disclosures do not establish causation.",
+    "Subsector conclusions require verified business classifications."
+  ],
+  "cluster_profiles": [
+    {
+      "cluster_selected": "1",
+      "profit_margin": "0.030449878239859965",
+      "asset_turnover": "1.3538853728009441",
+      "equity_multiplier": "2.7759397644798036",
+      "roe": "0.1353945663818112"
+    },
+    {
+      "cluster_selected": "2",
+      "profit_margin": "0.17926239713563763",
+      "asset_turnover": "0.4856688435998074",
+      "equity_multiplier": "1.9384933987263095",
+      "roe": "0.14798515916048477"
+    },
+    {
+      "cluster_selected": "3",
+      "profit_margin": "0.17854423563971575",
+      "asset_turnover": "0.38365241848786463",
+      "equity_multiplier": "14.546070460964192",
+      "roe": "0.863213581016081"
+    }
+  ],
+  "cluster_scores": [
+    {
+      "k": "2",
+      "silhouette": "0.5004765252559621",
+      "inertia": "86.12413426477814",
+      "mean_seed_agreement": "1.0"
+    },
+    {
+      "k": "3",
+      "silhouette": "0.5715876471868783",
+      "inertia": "48.1694500122714",
+      "mean_seed_agreement": "1.0"
+    },
+    {
+      "k": "4",
+      "silhouette": "0.5684343001469425",
+      "inertia": "26.728753348112647",
+      "mean_seed_agreement": "1.0"
+    },
+    {
+      "k": "5",
+      "silhouette": "0.37276990367323326",
+      "inertia": "18.899710531784848",
+      "mean_seed_agreement": "0.9783706565260256"
+    },
+    {
+      "k": "6",
+      "silhouette": "0.3828101332101431",
+      "inertia": "14.035004556050387",
+      "mean_seed_agreement": "1.0"
+    }
+  ],
+  "company_clusters": [
+    {
+      "ticker": "A",
+      "profit_margin": "0.18832329484236196",
+      "asset_turnover": "0.5941665091221713",
+      "equity_multiplier": "1.9419259897919328",
+      "roe": "0.21698055681389516",
+      "years_available": "5",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "ABBV",
+      "profit_margin": "0.13510185272490668",
+      "asset_turnover": "0.38519749274341125",
+      "equity_multiplier": "16.544451023102233",
+      "roe": "0.7088216958154053",
+      "years_available": "5",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "3"
+    },
+    {
+      "ticker": "ABT",
+      "profit_margin": "0.1770328087721781",
+      "asset_turnover": "0.5351017024217809",
+      "equity_multiplier": "1.9350608076606866",
+      "roe": "0.1796954390100022",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "ALGN",
+      "profit_margin": "0.22214191451381718",
+      "asset_turnover": "0.6217493229131071",
+      "equity_multiplier": "1.6023205933757778",
+      "roe": "0.1993293968534858",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "AMGN",
+      "profit_margin": "0.2219866185545248",
+      "asset_turnover": "0.382107344232318",
+      "equity_multiplier": "12.54768989882615",
+      "roe": "1.0176054662167566",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "3"
+    },
+    {
+      "ticker": "BAX",
+      "profit_margin": "0.022893276237927685",
+      "asset_turnover": "0.46947775465127145",
+      "equity_multiplier": "3.531017584910156",
+      "roe": "-0.0136745635714784",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "BDX",
+      "profit_margin": "0.08210386222279185",
+      "asset_turnover": "0.3570959471097999",
+      "equity_multiplier": "2.1798769328042034",
+      "roe": "0.0641619470728933",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "BMY",
+      "profit_margin": "0.03587347944945248",
+      "asset_turnover": "0.4649563388611549",
+      "equity_multiplier": "3.844529195771308",
+      "roe": "0.04444449062604763",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "CI",
+      "profit_margin": "0.030449878239859965",
+      "asset_turnover": "1.3357755649722602",
+      "equity_multiplier": "3.4145337730340386",
+      "roe": "0.12837287549651163",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "1",
+      "cluster_selected": "1"
+    },
+    {
+      "ticker": "CNC",
+      "profit_margin": "0.006471176097472317",
+      "asset_turnover": "1.906677678116172",
+      "equity_multiplier": "3.1717224888711395",
+      "roe": "0.010934781033654714",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "1",
+      "cluster_selected": "1"
+    },
+    {
+      "ticker": "COO",
+      "profit_margin": "0.24941223527693776",
+      "asset_turnover": "0.3179307591925647",
+      "equity_multiplier": "1.5532118037822036",
+      "roe": "0.11221723292006858",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "CRL",
+      "profit_margin": "0.07363293408531013",
+      "asset_turnover": "0.5273455916499012",
+      "equity_multiplier": "2.4383618123739663",
+      "roe": "0.09710829373691722",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "CVS",
+      "profit_margin": "0.01787665538309668",
+      "asset_turnover": "1.3869637459879975",
+      "equity_multiplier": "3.268448704893043",
+      "roe": "0.07713986886694187",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "1",
+      "cluster_selected": "1"
+    },
+    {
+      "ticker": "DGX",
+      "profit_margin": "0.11711904693750137",
+      "asset_turnover": "0.6977332380221241",
+      "equity_multiplier": "2.205833332444407",
+      "roe": "0.18068346845903535",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "DHR",
+      "profit_margin": "0.1937388951797705",
+      "asset_turnover": "0.30792297080899833",
+      "equity_multiplier": "1.695783472077985",
+      "roe": "0.10243669705069264",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "DXCM",
+      "profit_margin": "0.1556302669105574",
+      "asset_turnover": "0.5700963574216669",
+      "equity_multiplier": "2.6191991285899068",
+      "roe": "0.2294792248511267",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "ELV",
+      "profit_margin": "0.03605710833911992",
+      "asset_turnover": "1.5132949976692247",
+      "equity_multiplier": "2.7526664320819627",
+      "roe": "0.14928335172796423",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "1",
+      "cluster_selected": "1"
+    },
+    {
+      "ticker": "GILD",
+      "profit_margin": "0.1526546826194378",
+      "asset_turnover": "0.43621869917070266",
+      "equity_multiplier": "3.0550335433042064",
+      "roe": "0.19436485773724788",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "HSIC",
+      "profit_margin": "0.038000523147072585",
+      "asset_turnover": "1.3027275781604344",
+      "equity_multiplier": "2.7759397644798036",
+      "roe": "0.1353945663818112",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "1",
+      "cluster_selected": "1"
+    },
+    {
+      "ticker": "HUM",
+      "profit_margin": "0.025329019624264617",
+      "asset_turnover": "2.2801484588705185",
+      "equity_multiplier": "2.7700700940629166",
+      "roe": "0.15083013456051705",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "1",
+      "cluster_selected": "1"
+    },
+    {
+      "ticker": "IDXX",
+      "profit_margin": "0.2255116475480079",
+      "asset_turnover": "1.2192715563041239",
+      "equity_multiplier": "3.0036944335228366",
+      "roe": "0.8168659780553732",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "INCY",
+      "profit_margin": "0.12112821032388876",
+      "asset_turnover": "0.6663675603479533",
+      "equity_multiplier": "1.3735459380181283",
+      "roe": "0.09832066300532345",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "ISRG",
+      "profit_margin": "0.26143594404598475",
+      "asset_turnover": "0.4483316949181888",
+      "equity_multiplier": "1.1517265188366947",
+      "roe": "0.13477422825494276",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "LH",
+      "profit_margin": "0.08685701518070982",
+      "asset_turnover": "0.7115616736187788",
+      "equity_multiplier": "2.1079331499982144",
+      "roe": "0.12839991372471227",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "LLY",
+      "profit_margin": "0.22894017655904828",
+      "asset_turnover": "0.5613376518295642",
+      "equity_multiplier": "5.674082657693796",
+      "roe": "0.7187009939569328",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "MDT",
+      "profit_margin": "0.13622255215978796",
+      "asset_turnover": "0.34324437840104755",
+      "equity_multiplier": "1.7993749701455137",
+      "roe": "0.08394534446627748",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "MRK",
+      "profit_margin": "0.2061096314372577",
+      "asset_turnover": "0.507279616727899",
+      "equity_multiplier": "2.788000875570979",
+      "roe": "0.2771455899196275",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "MRNA",
+      "profit_margin": "-0.5126694748375726",
+      "asset_turnover": "0.3935307815309009",
+      "equity_multiplier": "1.6691303748586257",
+      "roe": "0.0025092885438178225",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "1",
+      "cluster_selected": "1"
+    },
+    {
+      "ticker": "PFE",
+      "profit_margin": "0.18149198549909717",
+      "asset_turnover": "0.3480776112431054",
+      "equity_multiplier": "2.370354895506052",
+      "roe": "0.1603669297803813",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "PODD",
+      "profit_margin": "0.07350976848945136",
+      "asset_turnover": "0.6290842993311613",
+      "equity_multiplier": "3.2829129701919713",
+      "roe": "0.14016818476813775",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "REGN",
+      "profit_margin": "0.3664176306893967",
+      "asset_turnover": "0.44498400191622545",
+      "equity_multiplier": "1.3430830989101021",
+      "roe": "0.23116540031622768",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "RMD",
+      "profit_margin": "0.21318762462965637",
+      "asset_turnover": "0.659947576539461",
+      "equity_multiplier": "1.5682277089053442",
+      "roe": "0.21787722173101018",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "RVTY",
+      "profit_margin": "0.174209801012394",
+      "asset_turnover": "0.27076037588961815",
+      "equity_multiplier": "1.8605153083372123",
+      "roe": "0.09343244216121703",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "STE",
+      "profit_margin": "0.08755851159871235",
+      "asset_turnover": "0.47546448762290866",
+      "equity_multiplier": "1.6855658881123172",
+      "roe": "0.07169086172919133",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "TECH",
+      "profit_margin": "0.22065572984412948",
+      "asset_turnover": "0.42339519381766594",
+      "equity_multiplier": "1.3826178639056745",
+      "roe": "0.1284054763296604",
+      "years_available": "5",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "TMO",
+      "profit_margin": "0.16461766349290216",
+      "asset_turnover": "0.4365977026818517",
+      "equity_multiplier": "2.113898143130404",
+      "roe": "0.15228591142372985",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "UHS",
+      "profit_margin": "0.06977885876033753",
+      "asset_turnover": "1.0084786436791522",
+      "equity_multiplier": "2.189831121811413",
+      "roe": "0.1531756464795403",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "1",
+      "cluster_selected": "1"
+    },
+    {
+      "ticker": "UNH",
+      "profit_margin": "0.05086993233894554",
+      "asset_turnover": "1.3538853728009441",
+      "equity_multiplier": "3.1202626332363708",
+      "roe": "0.21175045487354663",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "1",
+      "cluster_selected": "1"
+    },
+    {
+      "ticker": "VEEV",
+      "profit_margin": "0.24529205413200392",
+      "asset_turnover": "0.44576298556272453",
+      "equity_multiplier": "1.3070964071106008",
+      "roe": "0.1436844068972397",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "VRTX",
+      "profit_margin": "0.2942849837828115",
+      "asset_turnover": "0.4958731995767061",
+      "equity_multiplier": "1.3378848404021582",
+      "roe": "0.19464439427579627",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "WST",
+      "profit_margin": "0.18833139598578283",
+      "asset_turnover": "0.784239522838113",
+      "equity_multiplier": "1.3840877508440368",
+      "roe": "0.20556365655020858",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "ZBH",
+      "profit_margin": "0.06904030976137439",
+      "asset_turnover": "0.328001987730347",
+      "equity_multiplier": "1.8103735653496893",
+      "roe": "0.041607839957966",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    },
+    {
+      "ticker": "ZTS",
+      "profit_margin": "0.26571052028920533",
+      "asset_turnover": "0.5752607607930454",
+      "equity_multiplier": "3.42426354069907",
+      "roe": "0.5259344222214615",
+      "years_available": "6",
+      "subsector": "Unclassified",
+      "cluster_k2": "2",
+      "cluster_selected": "2"
+    }
+  ]
+}
