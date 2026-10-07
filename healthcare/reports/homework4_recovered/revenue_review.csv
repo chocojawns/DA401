@@ -1,0 +1,15 @@
+ticker,fiscal_year,accession,selected_tag,selected_value,alternative_tag,alternative_value,source_url
+CNC,2020,0001071739-22-000071,Revenues,111115000000,RevenueFromContractWithCustomerExcludingAssessedTax,103800000000,https://www.sec.gov/Archives/edgar/data/1071739/000107173922000071/0001071739-22-000071.txt
+CNC,2021,0001071739-23-000047,Revenues,125982000000,RevenueFromContractWithCustomerExcludingAssessedTax,117983000000,https://www.sec.gov/Archives/edgar/data/1071739/000107173923000047/0001071739-23-000047.txt
+CNC,2022,0001071739-24-000037,Revenues,144547000000,RevenueFromContractWithCustomerExcludingAssessedTax,135479000000,https://www.sec.gov/Archives/edgar/data/1071739/000107173924000037/0001071739-24-000037.txt
+CNC,2023,0001071739-25-000027,Revenues,153999000000,RevenueFromContractWithCustomerExcludingAssessedTax,140095000000,https://www.sec.gov/Archives/edgar/data/1071739/000107173925000027/0001071739-25-000027.txt
+CNC,2024,0001071739-26-000049,Revenues,163071000000,RevenueFromContractWithCustomerExcludingAssessedTax,145505000000,https://www.sec.gov/Archives/edgar/data/1071739/000107173926000049/0001071739-26-000049.txt
+CNC,2025,0001071739-26-000049,Revenues,194777000000,RevenueFromContractWithCustomerExcludingAssessedTax,174581000000,https://www.sec.gov/Archives/edgar/data/1071739/000107173926000049/0001071739-26-000049.txt
+HUM,2020,0000049071-22-000017,Revenues,77155000000,RevenueFromContractWithCustomerIncludingAssessedTax,1815000000,https://www.sec.gov/Archives/edgar/data/49071/000004907122000017/0000049071-22-000017.txt
+HUM,2021,0000049071-23-000011,Revenues,83064000000,RevenueFromContractWithCustomerIncludingAssessedTax,3055000000,https://www.sec.gov/Archives/edgar/data/49071/000004907123000011/0000049071-23-000011.txt
+HUM,2022,0000049071-24-000012,Revenues,92870000000,RevenueFromContractWithCustomerIncludingAssessedTax,4776000000,https://www.sec.gov/Archives/edgar/data/49071/000004907124000012/0000049071-24-000012.txt
+HUM,2023,0000049071-25-000007,Revenues,106374000000,RevenueFromContractWithCustomerIncludingAssessedTax,4033000000,https://www.sec.gov/Archives/edgar/data/49071/000004907125000007/0000049071-25-000007.txt
+HUM,2024,0000049071-26-000009,Revenues,117761000000,RevenueFromContractWithCustomerIncludingAssessedTax,4431000000,https://www.sec.gov/Archives/edgar/data/49071/000004907126000009/0000049071-26-000009.txt
+HUM,2025,0000049071-26-000009,Revenues,129664000000,RevenueFromContractWithCustomerIncludingAssessedTax,5833000000,https://www.sec.gov/Archives/edgar/data/49071/000004907126000009/0000049071-26-000009.txt
+PODD,2021,0001145197-23-000020,Revenues,1098800000,RevenueFromContractWithCustomerExcludingAssessedTax,1040600000,https://www.sec.gov/Archives/edgar/data/1145197/000114519723000020/0001145197-23-000020.txt
+PFE,2022,0000078003-24-000039,Revenues,100330000000,RevenueFromContractWithCustomerExcludingAssessedTax,91793000000,https://www.sec.gov/Archives/edgar/data/78003/000007800324000039/0000078003-24-000039.txt

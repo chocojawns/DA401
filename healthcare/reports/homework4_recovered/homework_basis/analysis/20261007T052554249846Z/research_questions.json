@@ -1,0 +1,152 @@
+[
+  {
+    "ticker": "MRNA",
+    "fiscal_year": 2021,
+    "subsector": "Unclassified",
+    "question": "What disclosed risks might relate to the +159.09 percentage-point profit-margin change at MRNA in 2021, and what evidence is needed to establish actual causes?",
+    "evidence": {
+      "profit_margin": 0.660603107574035,
+      "prior_profit_margin": -0.9302615193026152,
+      "roe": 0.862636974195829,
+      "prior_roe": -0.2916829363529871
+    },
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285223000011/0001682852-23-000011.txt",
+    "prior_source_url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285222000012/0001682852-22-000012.txt",
+    "interpretation": "Exploratory retrospective question, not evidence of causation or prediction."
+  },
+  {
+    "ticker": "MRNA",
+    "fiscal_year": 2023,
+    "subsector": "Unclassified",
+    "question": "What disclosed risks might relate to the -112.25 percentage-point profit-margin change at MRNA in 2023, and what evidence is needed to establish actual causes?",
+    "evidence": {
+      "profit_margin": -0.688376168224299,
+      "prior_profit_margin": 0.4340964543425219,
+      "roe": -0.3402627400028872,
+      "prior_roe": 0.4372744862207812
+    },
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285225000022/0001682852-25-000022.txt",
+    "prior_source_url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285224000015/0001682852-24-000015.txt",
+    "interpretation": "Exploratory retrospective question, not evidence of causation or prediction."
+  },
+  {
+    "ticker": "COO",
+    "fiscal_year": 2021,
+    "subsector": "Unclassified",
+    "question": "What disclosed risks might relate to the +90.95 percentage-point profit-margin change at COO in 2021, and what evidence is needed to establish actual causes?",
+    "evidence": {
+      "profit_margin": 1.00759623609923,
+      "prior_profit_margin": 0.0980706734131391,
+      "roe": 0.4241983347258636,
+      "prior_roe": 0.0623333159023165
+    },
+    "source_url": "https://www.sec.gov/Archives/edgar/data/711404/000071140422000053/0000711404-22-000053.txt",
+    "prior_source_url": "https://www.sec.gov/Archives/edgar/data/711404/000071140421000038/0000711404-21-000038.txt",
+    "interpretation": "Exploratory retrospective question, not evidence of causation or prediction."
+  },
+  {
+    "ticker": "COO",
+    "fiscal_year": 2022,
+    "subsector": "Unclassified",
+    "question": "What disclosed risks might relate to the -89.10 percentage-point profit-margin change at COO in 2022, and what evidence is needed to establish actual causes?",
+    "evidence": {
+      "profit_margin": 0.1166122597025752,
+      "prior_profit_margin": 1.00759623609923,
+      "roe": 0.0537737821450972,
+      "prior_roe": 0.4241983347258636
+    },
+    "source_url": "https://www.sec.gov/Archives/edgar/data/711404/000071140423000072/0000711404-23-000072.txt",
+    "prior_source_url": "https://www.sec.gov/Archives/edgar/data/711404/000071140422000053/0000711404-22-000053.txt",
+    "interpretation": "Exploratory retrospective question, not evidence of causation or prediction."
+  },
+  {
+    "ticker": "ALGN",
+    "fiscal_year": 2021,
+    "subsector": "Unclassified",
+    "question": "What disclosed risks might relate to the -52.31 percentage-point profit-margin change at ALGN in 2021, and what evidence is needed to establish actual causes?",
+    "evidence": {
+      "profit_margin": 0.1953203271581325,
+      "prior_profit_margin": 0.7184184412168413,
+      "roe": 0.2131054231716884,
+      "prior_roe": 0.5491534124028059
+    },
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1097149/000109714923000013/0001097149-23-000013.txt",
+    "prior_source_url": "https://www.sec.gov/Archives/edgar/data/1097149/000109714922000011/0001097149-22-000011.txt",
+    "interpretation": "Exploratory retrospective question, not evidence of causation or prediction."
+  },
+  {
+    "ticker": "INCY",
+    "fiscal_year": 2021,
+    "subsector": "Unclassified",
+    "question": "What disclosed risks might relate to the +42.85 percentage-point profit-margin change at INCY in 2021, and what evidence is needed to establish actual causes?",
+    "evidence": {
+      "profit_margin": 0.317647752193625,
+      "prior_profit_margin": -0.1108849057749984,
+      "roe": 0.2516127303843709,
+      "prior_roe": -0.1132388556057823
+    },
+    "source_url": "https://www.sec.gov/Archives/edgar/data/879169/000087916923000008/0000879169-23-000008.txt",
+    "prior_source_url": "https://www.sec.gov/Archives/edgar/data/879169/000155837022000902/0001558370-22-000902.txt",
+    "interpretation": "Exploratory retrospective question, not evidence of causation or prediction."
+  },
+  {
+    "ticker": "BAX",
+    "fiscal_year": 2023,
+    "subsector": "Unclassified",
+    "question": "What disclosed risks might relate to the +42.41 percentage-point profit-margin change at BAX in 2023, and what evidence is needed to establish actual causes?",
+    "evidence": {
+      "profit_margin": 0.2563706563706563,
+      "prior_profit_margin": -0.1677237005377085,
+      "roe": 0.3161152106641275,
+      "prior_roe": -0.4171095491170924
+    },
+    "source_url": "https://www.sec.gov/Archives/edgar/data/10456/000162828025007201/0001628280-25-007201.txt",
+    "prior_source_url": "https://www.sec.gov/Archives/edgar/data/10456/000162828024003932/0001628280-24-003932.txt",
+    "interpretation": "Exploratory retrospective question, not evidence of causation or prediction."
+  },
+  {
+    "ticker": "VRTX",
+    "fiscal_year": 2024,
+    "subsector": "Unclassified",
+    "question": "What disclosed risks might relate to the -41.54 percentage-point profit-margin change at VRTX in 2024, and what evidence is needed to establish actual causes?",
+    "evidence": {
+      "profit_margin": -0.0486020997994573,
+      "prior_profit_margin": 0.3667571839662789,
+      "roe": -0.032639430577223,
+      "prior_roe": 0.2058883756911105
+    },
+    "source_url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000056/0000875320-26-000056.txt",
+    "prior_source_url": "https://www.sec.gov/Archives/edgar/data/875320/000087532025000053/0000875320-25-000053.txt",
+    "interpretation": "Exploratory retrospective question, not evidence of causation or prediction."
+  },
+  {
+    "ticker": "MRNA",
+    "fiscal_year": 2024,
+    "subsector": "Unclassified",
+    "question": "What disclosed risks might relate to the -41.21 percentage-point profit-margin change at MRNA in 2024, and what evidence is needed to establish actual causes?",
+    "evidence": {
+      "profit_margin": -1.1004326328800988,
+      "prior_profit_margin": -0.688376168224299,
+      "roe": -0.3266672782313549,
+      "prior_roe": -0.3402627400028872
+    },
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000033/0001682852-26-000033.txt",
+    "prior_source_url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285225000022/0001682852-25-000022.txt",
+    "interpretation": "Exploratory retrospective question, not evidence of causation or prediction."
+  },
+  {
+    "ticker": "VRTX",
+    "fiscal_year": 2025,
+    "subsector": "Unclassified",
+    "question": "What disclosed risks might relate to the +37.80 percentage-point profit-margin change at VRTX in 2025, and what evidence is needed to establish actual causes?",
+    "evidence": {
+      "profit_margin": 0.3293976485880696,
+      "prior_profit_margin": -0.0486020997994573,
+      "roe": 0.2117884044616357,
+      "prior_roe": -0.032639430577223
+    },
+    "source_url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000056/0000875320-26-000056.txt",
+    "prior_source_url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000056/0000875320-26-000056.txt",
+    "interpretation": "Exploratory retrospective question, not evidence of causation or prediction."
+  }
+]

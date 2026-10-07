@@ -1,0 +1,57 @@
+ticker,usable_years,included,reason
+A,5,True,
+ABBV,5,True,
+ABT,6,True,
+ALGN,6,True,
+AMGN,6,True,
+BAX,6,True,
+BDX,6,True,
+BIIB,4,False,Fewer than 5 usable fiscal years
+BMY,6,True,
+BSX,4,False,Fewer than 5 usable fiscal years
+CAH,2,False,Fewer than 5 usable fiscal years
+CI,6,True,
+CNC,6,True,
+COO,6,True,
+COR,1,False,Fewer than 5 usable fiscal years
+CRL,6,True,
+CVS,6,True,
+DGX,6,True,
+DHR,6,True,
+DVA,4,False,Fewer than 5 usable fiscal years
+DXCM,6,True,
+ELV,6,True,
+EW,4,False,Fewer than 5 usable fiscal years
+GEHC,4,False,Fewer than 5 usable fiscal years
+GILD,6,True,
+HCA,1,False,Fewer than 5 usable fiscal years
+HSIC,6,True,
+HUM,6,True,
+IDXX,6,True,
+INCY,6,True,
+IQV,4,False,Fewer than 5 usable fiscal years
+ISRG,6,True,
+LH,6,True,
+LLY,6,True,
+MCK,1,False,Fewer than 5 usable fiscal years
+MDT,6,True,
+MRK,6,True,
+MRNA,6,True,
+MTD,2,False,Fewer than 5 usable fiscal years
+PFE,6,True,
+PODD,6,True,
+REGN,6,True,
+RMD,6,True,
+RVTY,6,True,
+SOLV,3,False,Fewer than 5 usable fiscal years
+STE,6,True,
+TECH,5,True,
+TMO,6,True,
+UHS,6,True,
+UNH,6,True,
+VEEV,6,True,
+VRTX,6,True,
+WAT,3,False,Fewer than 5 usable fiscal years
+WST,6,True,
+ZBH,6,True,
+ZTS,6,True,

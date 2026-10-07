@@ -276,3 +276,7 @@ python .\HealthcareAnalysis.py --run-dir ".\healthcare\results\research\YOUR_RUN
 
 Check `company_eligibility.csv` and `analysis_coverage.csv` in the analysis output.
 Raw collector files are preserved even when a company does not qualify.
+
+## Saved healthcare review
+
+[Open the recovered healthcare results](healthcare/reports/homework4_recovered/README.md) for the coverage audit, source data, graphs, and 43-company analysis. No rerun is needed to view this saved snapshot.

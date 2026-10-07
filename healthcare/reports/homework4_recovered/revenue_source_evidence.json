@@ -1,0 +1,175 @@
+[
+  {
+    "ticker": "CNC",
+    "year": 2020,
+    "start": "2020-01-01",
+    "end": "2020-12-31",
+    "selected_value": 111115000000,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1071739/000107173922000071/0001071739-22-000071.txt",
+    "statement_rows": [
+      "Total revenues 125,982 111,115 74,639",
+      "Total revenues from external customers $ 106,862 $ 4,253 $ \u2014 $ 111,115",
+      "Total revenues $ 106,867 $ 14,994 $ ( 10,746 ) $ 111,115"
+    ]
+  },
+  {
+    "ticker": "CNC",
+    "year": 2021,
+    "start": "2021-01-01",
+    "end": "2021-12-31",
+    "selected_value": 125982000000,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1071739/000107173923000047/0001071739-23-000047.txt",
+    "statement_rows": [
+      "Total revenues 144,547 125,982 111,115",
+      "Total revenues from external customers $ 120,119 $ 5,863 $ \u2014 $ 125,982",
+      "Total revenues $ 120,125 $ 18,652 $ ( 12,795 ) $ 125,982"
+    ]
+  },
+  {
+    "ticker": "CNC",
+    "year": 2022,
+    "start": "2022-01-01",
+    "end": "2022-12-31",
+    "selected_value": 144547000000,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1071739/000107173924000037/0001071739-24-000037.txt",
+    "statement_rows": [
+      "Total revenues 153,999 144,547 125,982",
+      "Total revenues $ 93,151 $ 22,484 $ 17,380 $ 11,532 $ 144,547"
+    ]
+  },
+  {
+    "ticker": "CNC",
+    "year": 2023,
+    "start": "2023-01-01",
+    "end": "2023-12-31",
+    "selected_value": 153999000000,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1071739/000107173925000027/0001071739-25-000027.txt",
+    "statement_rows": [
+      "Total revenues 163,071 153,999 144,547",
+      "Total revenues $ 100,759 $ 22,261 $ 24,845 $ 6,134 $ 153,999"
+    ]
+  },
+  {
+    "ticker": "CNC",
+    "year": 2024,
+    "start": "2024-01-01",
+    "end": "2024-12-31",
+    "selected_value": 163071000000,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000049/0001071739-26-000049.txt",
+    "statement_rows": [
+      "Total revenues 194,777 163,071 153,999",
+      "Total revenues $ 101,417 $ 23,032 $ 33,702 $ 4,920 $ 163,071"
+    ]
+  },
+  {
+    "ticker": "CNC",
+    "year": 2025,
+    "start": "2025-01-01",
+    "end": "2025-12-31",
+    "selected_value": 194777000000,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000049/0001071739-26-000049.txt",
+    "statement_rows": [
+      "Total revenues 194,777 163,071 153,999",
+      "Total revenues $ 110,434 $ 37,210 $ 42,003 $ 5,130 $ 194,777"
+    ]
+  },
+  {
+    "ticker": "HUM",
+    "year": 2020,
+    "start": "2020-01-01",
+    "end": "2020-12-31",
+    "selected_value": 77155000000,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/49071/000004907122000017/0000049071-22-000017.txt",
+    "statement_rows": [
+      "Total revenues 83,064 77,155 64,888",
+      "Total revenues 67,298 7,285 28,448 ( 25,876 ) 77,155"
+    ]
+  },
+  {
+    "ticker": "HUM",
+    "year": 2021,
+    "start": "2021-01-01",
+    "end": "2021-12-31",
+    "selected_value": 83064000000,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/49071/000004907123000011/0000049071-23-000011.txt",
+    "statement_rows": [
+      "Total revenues 92,870 83,064 77,155",
+      "Total revenues 80,930 14,058 ( 11,924 ) 83,064"
+    ]
+  },
+  {
+    "ticker": "HUM",
+    "year": 2022,
+    "start": "2022-01-01",
+    "end": "2022-12-31",
+    "selected_value": 92870000000,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/49071/000004907124000012/0000049071-24-000012.txt",
+    "statement_rows": [
+      "Total revenues 106,374 92,870 83,064",
+      "Total revenues 88,841 17,307 ( 13,278 ) 92,870"
+    ]
+  },
+  {
+    "ticker": "HUM",
+    "year": 2023,
+    "start": "2023-01-01",
+    "end": "2023-12-31",
+    "selected_value": 106374000000,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/49071/000004907125000007/0000049071-25-000007.txt",
+    "statement_rows": [
+      "Total revenues 117,761 106,374 92,870",
+      "Total revenues 102,854 18,405 ( 14,885 ) 106,374"
+    ]
+  },
+  {
+    "ticker": "HUM",
+    "year": 2024,
+    "start": "2024-01-01",
+    "end": "2024-12-31",
+    "selected_value": 117761000000,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/49071/000004907126000009/0000049071-26-000009.txt",
+    "statement_rows": [
+      "Total revenues 129,664 117,761 106,374",
+      "Total revenues 113,764 19,936 ( 15,939 ) 117,761"
+    ]
+  },
+  {
+    "ticker": "HUM",
+    "year": 2025,
+    "start": "2025-01-01",
+    "end": "2025-12-31",
+    "selected_value": 129664000000,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/49071/000004907126000009/0000049071-26-000009.txt",
+    "statement_rows": [
+      "Total revenues 129,664 117,761 106,374",
+      "Total revenues 124,563 22,473 ( 17,372 ) 129,664"
+    ]
+  },
+  {
+    "ticker": "PODD",
+    "year": 2021,
+    "start": "2021-01-01",
+    "end": "2021-12-31",
+    "selected_value": 1098800000,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1145197/000114519723000020/0001145197-23-000020.txt",
+    "statement_rows": [
+      "Total revenue 1,305.3 1,098.8 904.4",
+      "Total $ 1,305.3 $ 1,098.8 $ 904.4",
+      "Total revenue $ 1,305.3 $ 1,098.8 $ 904.4"
+    ]
+  },
+  {
+    "ticker": "PFE",
+    "year": 2022,
+    "start": "2022-01-01",
+    "end": "2022-12-31",
+    "selected_value": 100330000000,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/78003/000007800324000039/0000078003-24-000039.txt",
+    "statement_rows": [
+      "Total revenues 58,496 100,330 81,288",
+      "$ 58,496 $ 100,330 $ 81,288 $ 1,058 $ 34,729 $ 24,311 $ 6,290 $ 5,064 $ 5,191",
+      "Total revenues $ 58,496 $ 100,330 $ 81,288",
+      "TOTAL REVENUES $ 58,496 $ 100,330 $ 81,288"
+    ]
+  }
+]
