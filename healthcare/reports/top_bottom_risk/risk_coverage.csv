@@ -1,0 +1,21 @@
+ticker,company_name,group,matched_2025_filings,status
+AMGN,Amgen Inc.,Top 10,1,ready
+ZTS,Zoetis Inc.,Top 10,1,ready
+LLY,ELI LILLY AND COMPANY,Top 10,1,ready
+IDXX,IDEXX LABORATORIES INC /DE,Top 10,1,ready
+BMY,BRISTOL-MYERS SQUIBB COMPANY,Top 10,1,ready
+GILD,"GILEAD SCIENCES, INC.",Top 10,1,ready
+MRK,"Merck & Co., Inc.",Top 10,1,ready
+DXCM,"DEXCOM, INC.",Top 10,1,ready
+INCY,INCYTE CORPORATION,Top 10,1,ready
+RMD,ResMed Inc.,Top 10,1,ready
+HUM,HUMANA INC,Bottom 10,1,ready
+BDX,"BECTON, DICKINSON AND COMPANY",Bottom 10,1,ready
+ZBH,,Bottom 10,0,missing or ambiguous; not substituted
+COO,"The Cooper Companies, Inc.",Bottom 10,1,ready
+RVTY,"REVVITY, INC",Bottom 10,1,ready
+CVS,CVS HEALTH CORPORATION,Bottom 10,1,ready
+CRL,"CHARLES RIVER LABORATORIES INTERNATIONAL, INC.",Bottom 10,1,ready
+BAX,BAXTER INTERNATIONAL INC.,Bottom 10,1,ready
+MRNA,"Moderna, Inc.",Bottom 10,1,ready
+CNC,CENTENE CORPORATION,Bottom 10,1,ready
