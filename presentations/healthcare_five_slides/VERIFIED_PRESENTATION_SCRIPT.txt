@@ -1,0 +1,304 @@
+HEALTHCARE ROE, 2020–2025: PRESENTATION SCRIPT AND DEFENSE GUIDE
+Companion to Healthcare_5_Slides.pptx
+Prepared October 7, 2026
+
+HOW TO USE THIS FILE
+Read the SAY sections as your presentation. The remaining sections prepare you for questions; they are not all intended to be spoken. The five SAY sections form an approximately 7–9 minute presentation, depending on pace.
+
+VERIFICATION SCOPE
+The numerical statements below were recalculated from the saved eligible financial panel and checked against the slide data. Pfizer quotations were checked against the saved text of its SEC 2023 Form 10-K. This is not an independent audit of every SEC extraction, nor a completed literature review. Draft subsector labels have not been independently validated. No failed AI finding is treated as verified evidence. General business-model explanations below are context and hypotheses, not estimated causes of our observed numbers.
+
+CENTRAL QUESTION
+Why do healthcare companies differ in return on equity, how did those differences change from 2020 through 2025, and what do disclosed risks suggest we should investigate before calling those returns sustainable?
+
+OUR ANSWER IN ONE SENTENCE
+Healthcare ROE is uneven and changed substantially over time; margins, asset use and the size of book equity all matter, so high ROE should lead to a closer examination of earnings and risk rather than an automatic judgment of superior performance.
+
+======================================================================
+SLIDE 1 — HIGH ROE IS CONCENTRATED IN A FEW COMPANIES
+======================================================================
+QUESTION ANSWERED
+What does the distribution look like, and does the average describe most companies well?
+
+SAY
+“Our question is what lies behind healthcare companies’ return on equity, and whether a high number necessarily indicates strong, sustainable performance.
+
+First, ROE means annual net income divided by book shareholders’ equity. We express it as a percentage. A 20 percent ROE means 20 cents of annual net income per dollar of book equity. It is not a 20 percent stock return or dividend yield.
+
+This histogram summarizes 43 eligible companies. For each company, we first averaged its ROE across its five or six usable years. We then plotted the distribution of those company averages. Each company contributes one observation here.
+
+The mean is 20.74 percent, but the median is 14.93 percent. The high values on the right pull the mean upward. That means a single average can make the sample look more uniformly profitable than it really is.
+
+We did not automatically delete those high values. We checked sensitivity: applying the ROE interquartile-range rule flags five companies. Excluding them lowers the mean to 13.50 percent. That shows the average is sensitive to extreme observations; it does not establish that those observations are errors.
+
+The next question is whether different business models help organize these differences.”
+
+WHY THIS GRAPH
+A histogram shows concentration, spread and asymmetry at once. A ranking chart would emphasize winners and losers without showing how unusual they are. The mean and median reference lines show the practical effect of the right tail. The removed Q–Q plot was a normality diagnostic, not necessary for the central five-slide story.
+
+CALCULATION AND VERIFIED NUMBERS
+For company i: company_average_i = sum of its usable annual ROEs / its number of usable years.
+Then take the mean, median and sample standard deviation across 43 company averages.
+Mean: 20.7396%. Median: 14.9283%. Sample SD: 21.9008 percentage points.
+Q1: 9.7714%; Q3: 20.8657%; IQR: 11.0943 percentage points.
+Lower fence: Q1 − 1.5 IQR = −6.8699%.
+Upper fence: Q3 + 1.5 IQR = 37.5071%.
+Flagged company-average ROEs:
+  AbbVie (ABBV): 70.8822%
+  Amgen (AMGN): 101.7605%
+  IDEXX Laboratories (IDXX): 81.6866%
+  Eli Lilly (LLY): 71.8701%
+  Zoetis (ZTS): 52.5934%
+Removing those five leaves 38 companies and a mean of 13.5003%.
+This is a company-average calculation, NOT the mean of the 2025 ROEs and NOT a pooled mean that gives six-year companies more weight.
+
+LIKELY QUESTIONS
+Q: Why use the median?
+A: It is less sensitive to extreme values. We present it alongside the mean because they answer different descriptive questions.
+Q: Did you use two standard deviations to remove outliers?
+A: The primary sensitivity rule here is 1.5 IQR. A separate two-SD sensitivity check gave a mean of about 14.50% for 39 firms. Neither rule identifies errors by itself.
+Q: Can we assume a bell curve?
+A: No. The histogram is strongly right-skewed. We do not use normality-based probabilities from this picture.
+Q: Can average ROE exceed 100%?
+A: Yes. Annual income can exceed book equity, especially when the equity denominator is small. ROE is not a probability capped at 100%.
+
+DO NOT CLAIM
+“Most companies earned 20.74% every year,” “the outliers are wrong,” or “this is the entire healthcare sector.”
+
+======================================================================
+SLIDE 2 — BUSINESS-MODEL GROUPS FOLLOW DIFFERENT ROE PATHS
+======================================================================
+QUESTION ANSWERED
+How do the observed ROE patterns differ across business-model groups over all six years?
+
+SAY
+“Healthcare includes very different ways of earning revenue. A drug company, insurer, diagnostic laboratory and device manufacturer should not automatically be treated as interchangeable.
+
+Each panel here shows one draft business-model group, with one bar for every year from 2020 through 2025. Each bar is the median of the available eligible companies in that group for that year. All panels use the same vertical scale, so the visual heights are comparable.
+
+For example, the pharma and biotechnology group has median ROE of 34.17 percent in 2021, 9.11 percent in 2024, and 29.80 percent in 2025. Insurance and integrated health services show 15.29 percent in 2020 and 9.77 percent in 2025. Devices and supplies show 11.43 percent in 2020 and 9.92 percent in 2025, with fluctuations between those years.
+
+These are observed differences, not proof that business-model membership caused the returns. Some panels contain only one company. Animal-health medicines is Zoetis, and veterinary diagnostics is IDEXX. Their bars describe those companies, not a representative survey of their industries.
+
+The group definitions are provisional, and membership can change when a year is unavailable or flagged. To separate broad time changes from changing membership, the next chart holds the company set fixed.”
+
+WHY THIS GRAPH
+Small-multiple bar charts keep all six years visible within every group. They avoid presenting 2025 as a specially chosen year and avoid a crowded 60-bar chart with long labels. Common scales prevent a small movement in one group from appearing as large as a major movement in another. Orange marks the latest year for orientation, not statistical significance.
+
+BUSINESS CONTEXT — NOT CAUSAL FINDINGS
+Pharma/biotech: product sales, licensing and related arrangements; product mix, exclusivity, competition and research or transaction expenses can affect earnings.
+Insurance/integrated services: premiums and service revenue; medical claims, administrative costs and reimbursement arrangements can affect margins. Integrated firms also operate other businesses.
+Devices/supplies: equipment, consumables and related services; sales mix, utilization, pricing and manufacturing costs can matter.
+Care/diagnostic services: payment for care or tests; reimbursement, demand, staffing and facility use can matter.
+Tools/research services: instruments, consumables and research services; customer research spending and equipment demand can matter.
+These mechanisms motivate research questions. The bar chart does not measure their individual effects.
+
+IMPORTANT COMPOSITION DETAILS
+Pharma/biotech has 11 available firms through 2024 and 10 in 2025. AbbVie’s flagged 2025 equity changes that group’s composition.
+Devices/supplies: 12 firms each year.
+Insurance/integrated services: 6 firms each year.
+Care/diagnostic services: 3 firms — Labcorp (LH), Quest Diagnostics (DGX), Universal Health Services (UHS). This is NOT a hospitals-only group.
+Tools/research services: 5–6 firms per year — Agilent (A), Bio-Techne (TECH), Charles River (CRL), Danaher (DHR), Revvity (RVTY), Thermo Fisher (TMO), where available.
+Single-company panels: Zoetis (ZTS), IDEXX (IDXX), Abbott (ABT), Henry Schein (HSIC), Veeva (VEEV).
+See subsector_all_years.csv in this folder for every bar value and count.
+
+LIKELY QUESTIONS
+Q: Are these official industry classifications?
+A: No. They are draft analytical groups, disclosed as provisional. They should be independently validated before formal subsector inference.
+Q: Does this prove pharma is better than hospitals?
+A: No. Groups differ in composition and sample size, and our care group includes laboratories. ROE also reflects the equity denominator.
+Q: Is the 2025 pharma recovery entirely within the same firms?
+A: This chart cannot establish that because membership changes. A group-specific balanced-panel comparison is needed to isolate within-group membership effects.
+
+======================================================================
+SLIDE 3 — ROE FELL AFTER 2021; 2025 RECOVERED ONLY PARTLY
+======================================================================
+QUESTION ANSWERED
+What happened over time when we hold the observed company population constant?
+
+SAY
+“This chart follows the same 40 companies in every year. The median ROE was 18.68 percent in 2021, fell to 11.13 percent in 2024, and recovered to 12.68 percent in 2025. The recovery did not return the median to the 2021 peak.
+
+Keeping membership fixed makes the comparison clearer: the movement cannot simply be explained by adding a different company to the sample in a later year. It still does not establish why the movement occurred.
+
+Why 40 instead of 43? Agilent lacks a matched 2020 row in our current extracted panel; Bio-Techne lacks a matched 2025 row; and AbbVie’s 2025 equity is negative. Each remains in the broader analysis for its five usable years, but cannot enter a six-year comparison requiring six usable observations.
+
+Our conclusion is therefore about this selected 40-company panel. It is not a claim that every healthcare company declined, or that these firms represent a random sample of the entire sector.
+
+The next step is to understand why two companies can have very different ROE even when both earn positive profits.”
+
+WHY THIS GRAPH
+The bars directly answer the time-trend question in familiar percentage units. They replace the confusing loss-frequency graphic. That old graph measured the fraction of observed firms reporting a net loss; it was neither median ROE nor a forecast probability.
+
+METHOD
+For each year, sort the 40 ROEs and average the 20th and 21st values to obtain the median.
+The balance sheet denominator is year-end equity throughout this deck.
+Annual values are supplied in balanced_annual_medians.csv.
+A move from 18.68% to 11.13% is about −7.55 PERCENTAGE POINTS, not −7.55 percent. A proportional percentage change is a different calculation.
+A change in the annual median is not necessarily the median of individual companies’ changes.
+
+DATA COVERAGE AND TIMING
+The broader eligible panel contains 43 firms and 255 company-years. Eligibility requires at least five usable, unflagged years. This chart requires all six, yielding 240 company-years across 40 firms.
+The assignment’s 45-company benchmark is not our verified retained count. We report the actual count rather than forcing a match.
+Missing matched rows mean our current pipeline did not provide a usable record; they do not prove that the company never filed.
+Fiscal year and filing date are different. A filing submitted in 2026 may cover fiscal 2025. Different companies also have different fiscal year-end dates.
+Some numerical values come from comparative statements in later filings. This is retrospective financial analysis, not an as-known-at-the-time investment backtest.
+
+LIKELY QUESTIONS
+Q: Are 240 company-years 240 independent observations?
+A: No. The same firms repeat across years, and common economic shocks can affect multiple firms.
+Q: Is 40 too small?
+A: There is no universal threshold that guarantees validity. These data support descriptive comparisons. Generalization depends on selection, missingness, dependence and the question, not only the count.
+Q: Why not fill missing values with averages?
+A: That would create unobserved financial performance and could distort ranks and ratios. We disclose missingness instead.
+Q: Does the chart prove COVID caused the trend?
+A: No. Timing is not identification. Company-level disclosure evidence can add context, but a causal claim needs a credible design and alternative explanations addressed.
+
+======================================================================
+SLIDE 4 — HIGH ROE CAN REFLECT A SMALL EQUITY DENOMINATOR
+======================================================================
+QUESTION ANSWERED
+Does higher ROE necessarily mean more profit earned per dollar of assets?
+
+SAY
+“Here is a close-up of two companies from the broader sample. In 2025, Amgen has ROE of 89.06 percent, compared with 65.99 percent for IDEXX. Looking only at ROE would put Amgen first.
+
+But the ranking reverses when we divide net income by assets. Amgen earns about 8.51 cents per dollar of assets; IDEXX earns about 31.62 cents. The reason those rankings differ is the equity multiplier: Amgen’s assets are 10.46 times its book equity, while IDEXX’s are 2.09 times equity.
+
+DuPont makes the arithmetic explicit: ROE equals profit margin times asset turnover times the equity multiplier. Amgen’s smaller equity base relative to assets amplifies its positive asset return much more strongly.
+
+This does not tell us that Amgen is a worse investment or that IDEXX is automatically safer. It shows why we must investigate the denominator and the earnings together. Explaining how the equity base became small requires the equity statement and notes, not just this chart.”
+
+WHY THIS GRAPH
+The two-metric comparison makes a ranking reversal visible. The lines connect two different accounting measures for the SAME YEAR; they do not show change over time. This is an illustrative close-up after the full-company charts, not the full sample analysis.
+
+MATH TO WRITE IF ASKED
+M = net income / revenue
+T = revenue / assets
+L = assets / equity
+M × T × L = net income / equity = ROE
+Revenue and assets cancel algebraically.
+Amgen: 0.209817 × 0.405703 × 10.462693 ≈ 0.890621 = 89.06%.
+IDEXX: 0.246175 × 1.284396 × 2.087202 ≈ 0.659945 = 65.99%.
+Net income/assets = M × T: approximately 8.51% and 31.62% respectively.
+Full precision is used for calculations; displayed rounded inputs may not multiply exactly to the displayed output.
+
+LIKELY QUESTIONS
+Q: Is the equity multiplier the debt-to-equity ratio?
+A: No. It is assets/equity. Assets equal total liabilities plus equity, so it is 1 + total liabilities/equity when definitions align. Total liabilities are not the same as interest-bearing debt.
+Q: Does the chart prove debt caused high ROE?
+A: No. It demonstrates a denominator relationship. Borrowing, buybacks, distributions, accumulated earnings or losses, and other equity changes require separate evidence.
+Q: Why not regress ROE on these three ratios to prove the drivers?
+A: They are linked by an accounting identity. Mechanical association is not independent causal evidence.
+Q: What happens with negative equity?
+A: Positive net income divided by negative equity produces negative ROE even without a net loss. Such cases are flagged and excluded from the main positive-equity comparisons.
+Q: Why select these two?
+A: Their contrasting multipliers make the accounting mechanism easy to see. The pair is illustrative and deliberately selected, not a representative statistical sample.
+
+PRIMARY NUMERICAL SOURCES
+Amgen 2025 financial source:
+https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/0000318154-26-000010.txt
+IDEXX 2025 financial source:
+https://www.sec.gov/Archives/edgar/data/874716/000087471626000038/0000874716-26-000038.txt
+
+======================================================================
+SLIDE 5 — PFIZER: THE FILING GIVES CONTEXT FOR THE ROE DECLINE
+======================================================================
+QUESTION ANSWERED
+How can we connect an observed accounting change to documented business conditions without overstating causality?
+
+SAY
+“Pfizer provides a specific example of how to move from a ratio to a business question. On our year-end-balance basis, its ROE fell from 32.79 percent in 2022 to 2.38 percent in 2023.
+
+The waterfall allocates this change across the DuPont components. The margin contribution is about minus 24.35 percentage points, turnover minus 9.58 points, and the multiplier plus 3.52 points. Together they reconcile the observed decline.
+
+The 2023 filing supplies relevant business context: reduced COVID-product demand, excess inventory and significant Paxlovid and Comirnaty inventory write-offs. The Seagen acquisition is also relevant to the asset-base discussion. Those are reasons to investigate earnings and assets carefully; the waterfall does not estimate the number of points caused by each business event.
+
+For management, the follow-up is to monitor sales mix, inventory charges, recurring earnings and the actual results of mitigation. A promised cost saving is not the same as a realized saving.
+
+Our conclusion is that ROE is a starting point for investigation. We need the financial components and the underlying disclosures before judging whether high returns are sustainable.”
+
+WHY THIS GRAPH
+A waterfall reconciles a starting value to an ending value. It answers how the accounting change is allocated, while the filing supplies separately sourced business context. The red bars are negative contributions; the green bar is a positive contribution. Intermediate waterfall levels are accounting steps, not observed intermediate-year ROEs.
+
+EXACT ACCOUNTING CALCULATION
+2022 ROE: 32.7949739%.
+2023 ROE: 2.3805244%.
+Change: −30.4144495 percentage points.
+Margin contribution: −24.3496318 pp.
+Turnover contribution: −9.5846363 pp.
+Multiplier contribution: +3.5198186 pp.
+Rounded components can differ slightly from the rounded total.
+
+For each of the six possible orders of changing M, T and L from 2022 values to 2023 values, calculate the incremental change in the product when each factor is replaced. Average each factor’s contribution over all six orders. This symmetric allocation avoids choosing one arbitrary replacement order. The contributions sum to the full ROE change. It allocates interactions; it is not a causal intervention model.
+Example order M then T then L:
+  Margin increment = (M_new − M_old) × T_old × L_old.
+  Turnover increment = M_new × (T_new − T_old) × L_old.
+  Multiplier increment = M_new × T_new × (L_new − L_old).
+Repeat for the other five orders and average by factor. Multiply decimal-ratio contributions by 100 to obtain percentage points.
+
+VERIFIED DISCLOSURE EVIDENCE
+Pfizer 2023 Form 10-K:
+https://www.sec.gov/Archives/edgar/data/78003/000007800324000039/0000078003-24-000039.txt
+An exact excerpt states that the situation “resulted in significant inventory write-offs in 2023 and could continue to result in inventory write-offs”. The surrounding discussion identifies Paxlovid and Comirnaty, reduced revenues and excess inventory. The language combines reported outcomes with future risk: do not treat every disclosed risk as an event that occurred.
+An exact cost-program excerpt states: “This program is expected to deliver net cost savings of at least $4 billion, to be achieved primarily from 2023 through 2024.” This is management’s expectation in that filing. Our presentation does not verify subsequent realization.
+The 10-K contains multiple sections. Attribute risk exposure to Item 1A and reported performance or management actions to the relevant business/MD&A discussion; do not label every fact in the whole 10-K as Item 1A.
+
+NUMERICAL PROVENANCE LIMIT
+The stored 2022 financial row cites the 2023 filing above; the stored 2023 row cites comparative financial data in the later filing below:
+https://www.sec.gov/Archives/edgar/data/78003/000007800325000054/0000078003-25-000054.txt
+Consequently, this is a retrospective accounting comparison using saved matched financial values, not a reconstruction of only what an investor knew at each year-end. Do not claim the disclosure and both numerical rows necessarily come from one accession.
+
+LIKELY QUESTIONS
+Q: Did COVID cause the entire decline?
+A: We have relevant company disclosures, but did not isolate a causal effect. Acquisition effects, expenses, taxes, product mix and other changes also require review.
+Q: Did the Seagen acquisition reduce turnover?
+A: An acquisition can change the denominator and the timing of recognized revenue. The chart does not isolate its effect; review acquisition notes and comparable revenue/asset measures before quantifying it.
+Q: Does a write-off only affect margin?
+A: No. It can affect income and assets; DuPont components interact. The bridge is an allocation, not one business event per bar.
+Q: Did the AI confirm the top-versus-bottom risk differences?
+A: No validated conclusion is presented. The attempted API outputs failed source-quote checks repeatedly. We use verified filing evidence for this case and do not invent the broader comparison.
+
+======================================================================
+METHODS AND RESEARCH DEFENSE — USE DURING QUESTIONS
+======================================================================
+HOW WE GOT HERE
+1. Collected SEC filing information and financial quantities, retaining company identifiers, fiscal periods, accession numbers and source URLs.
+2. Matched annual quantities to fiscal periods rather than assuming the filing year equals the performance year.
+3. Calculated net-income-based profit margin, asset turnover, equity multiplier and ROE on a consistent year-end-balance basis for this deck.
+4. Screened missing/ambiguous records and equity warnings. Kept 43 companies with at least five usable years; used 40 with all six for the fixed-panel trend.
+5. Described the distribution and checked outlier sensitivity without assuming extremes are errors.
+6. Compared provisional business-model groups and selected transparent company examples to explain accounting mechanisms.
+7. Read source filing text to add business context. Distinguished reported events, potential risks and management expectations.
+
+ACCURACY: WHAT CAN YOU DEFEND?
+The displayed arithmetic can be reproduced from the saved tables; the DuPont identity is checked using consistent quantities. That is not the same as proving every selected SEC tag, comparative value or company classification is perfect. SEC provenance, period matching, explicit exclusions and reproducible calculations improve traceability. A full independent accounting audit was not performed. Do not give an unsupported percentage such as “99% accurate.”
+
+WHY NO STRONG INFERENTIAL OR CAUSAL CLAIM?
+The retained companies are a selected sample, not a random draw. Repeated firm-years are dependent. Common shocks can create cross-company dependence. Missingness and equity exclusions can be economically meaningful. Subsector groups are small and provisional. DuPont components share numerators and denominators. These conditions mean that a simple pooled correlation, t-test or normal-curve probability would not automatically answer our economic question validly.
+A future inferential design should define an estimand and target population, validate classifications and measurement, handle within-firm dependence, address common time shocks and multiple comparisons, and assess selection sensitivity. Firm/year effects or clustered uncertainty can help with specific assumptions but do not automatically establish causality.
+
+WHAT IS DISTINCTIVE ABOUT OUR WORK?
+The contribution is the transparent combination of a fiscal-year-matched financial panel, coverage accounting, DuPont explanations, outlier sensitivity and source-linked business questions. We are not claiming discovery of previously unknown public facts or a new causal law.
+
+WHAT IS NOT FINISHED?
+The all-years top/bottom AI risk study selected 120 company-years across 36 companies; 110 had matched disclosures. The run encountered repeated quote-validation failures. A completed, independently reviewed risk comparison and quantitative sector-wide risk severity analysis are not available for this presentation. The industrial presentation is separate; this healthcare deck does not establish a healthcare–industrial correlation.
+
+IF ASKED WHETHER THE ASSIGNMENT IS FULLY SATISFIED
+These five slides constitute the healthcare portion. The team must separately check the full Homework 5 rubric against both portions. Do not claim that a case study substitutes for a required sector-wide risk frequency/severity analysis or that the separate industrial panel has been validated by this healthcare analysis.
+
+FILES TO OPEN IF ASKED FOR EVIDENCE
+In this folder:
+  subsector_all_years.csv — exact group-year medians and counts.
+  balanced_annual_medians.csv — exact values behind Slide 3.
+  SPEAKER_NOTES.md — concise notes.
+Elsewhere in the repository:
+  presentations/homework5_team/dataframes/eligible_company_years.csv
+  presentations/homework5_team/dataframes/company_annual_dupont_contributions.csv
+  healthcare/reports/top_bottom_all_years/annual_rankings.csv
+  healthcare/reports/top_bottom_all_years/risk_coverage.csv
+  healthcare/reports/homework4_recovered/homework_basis/financials.csv
+The risk input JSONL contains disclosure text and provenance; its existence is not proof that AI findings passed validation.
+
+FINAL LINE TO REMEMBER
+“ROE tells us where to look. DuPont tells us how the accounting pieces fit. Filings help explain the business context. None of those steps alone proves causality or sustainability.”
