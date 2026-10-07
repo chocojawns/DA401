@@ -1,0 +1,121 @@
+ticker,fiscal_year,group,status,matched_filings
+LLY,2020,Top 10,ready,1
+IDXX,2020,Top 10,ready,1
+AMGN,2020,Top 10,ready,1
+ALGN,2020,Top 10,ready,1
+ZTS,2020,Top 10,ready,1
+ABBV,2020,Top 10,ready,1
+REGN,2020,Top 10,ready,1
+VRTX,2020,Top 10,ready,1
+MRK,2020,Top 10,ready,1
+DXCM,2020,Top 10,ready,1
+DHR,2020,Bottom 10,ready,1
+CNC,2020,Bottom 10,ready,1
+COO,2020,Bottom 10,ready,1
+BDX,2020,Bottom 10,ready,1
+PODD,2020,Bottom 10,ready,1
+GILD,2020,Bottom 10,ready,1
+ZBH,2020,Bottom 10,missing or ambiguous Item 1A,0
+INCY,2020,Bottom 10,ready,1
+BMY,2020,Bottom 10,ready,1
+MRNA,2020,Bottom 10,ready,1
+IDXX,2021,Top 10,ready,1
+AMGN,2021,Top 10,ready,1
+MRNA,2021,Top 10,ready,1
+ABBV,2021,Top 10,ready,1
+LLY,2021,Top 10,ready,1
+ZTS,2021,Top 10,ready,1
+REGN,2021,Top 10,ready,1
+COO,2021,Top 10,ready,1
+MRK,2021,Top 10,ready,1
+DGX,2021,Top 10,ready,1
+CI,2021,Bottom 10,missing or ambiguous Item 1A,0
+DXCM,2021,Bottom 10,ready,1
+CVS,2021,Bottom 10,ready,1
+STE,2021,Bottom 10,missing or ambiguous Item 1A,0
+TECH,2021,Bottom 10,ready,1
+BDX,2021,Bottom 10,ready,1
+MDT,2021,Bottom 10,ready,1
+CNC,2021,Bottom 10,ready,1
+ZBH,2021,Bottom 10,missing or ambiguous Item 1A,0
+PODD,2021,Bottom 10,ready,1
+AMGN,2022,Top 10,ready,1
+IDXX,2022,Top 10,ready,1
+ABBV,2022,Top 10,ready,1
+LLY,2022,Top 10,ready,1
+ZTS,2022,Top 10,ready,1
+MRNA,2022,Top 10,ready,1
+PFE,2022,Top 10,ready,1
+MRK,2022,Top 10,ready,1
+UNH,2022,Top 10,ready,1
+VRTX,2022,Top 10,ready,1
+INCY,2022,Bottom 10,ready,1
+RVTY,2022,Bottom 10,ready,1
+BDX,2022,Bottom 10,ready,1
+CVS,2022,Bottom 10,ready,1
+COO,2022,Bottom 10,ready,1
+CNC,2022,Bottom 10,ready,1
+STE,2022,Bottom 10,missing or ambiguous Item 1A,0
+ZBH,2022,Bottom 10,missing or ambiguous Item 1A,0
+PODD,2022,Bottom 10,ready,1
+BAX,2022,Bottom 10,ready,1
+AMGN,2023,Top 10,ready,1
+IDXX,2023,Top 10,ready,1
+LLY,2023,Top 10,ready,1
+ABBV,2023,Top 10,ready,1
+ZTS,2023,Top 10,ready,1
+BAX,2023,Top 10,ready,1
+PODD,2023,Top 10,ready,1
+BMY,2023,Top 10,ready,1
+DXCM,2023,Top 10,ready,1
+UNH,2023,Top 10,ready,1
+RVTY,2023,Bottom 10,ready,1
+ZBH,2023,Bottom 10,missing or ambiguous Item 1A,0
+MDT,2023,Bottom 10,ready,1
+BDX,2023,Bottom 10,ready,1
+LH,2023,Bottom 10,ready,1
+COO,2023,Bottom 10,ready,1
+PFE,2023,Bottom 10,ready,1
+STE,2023,Bottom 10,missing or ambiguous Item 1A,0
+MRK,2023,Bottom 10,ready,1
+MRNA,2023,Bottom 10,ready,1
+ABBV,2024,Top 10,ready,1
+LLY,2024,Top 10,ready,1
+AMGN,2024,Top 10,ready,1
+IDXX,2024,Top 10,ready,1
+ZTS,2024,Top 10,ready,1
+MRK,2024,Top 10,ready,1
+PODD,2024,Top 10,ready,1
+ABT,2024,Top 10,ready,1
+DXCM,2024,Top 10,ready,1
+A,2024,Top 10,ready,1
+STE,2024,Bottom 10,missing or ambiguous Item 1A,0
+COO,2024,Bottom 10,ready,1
+RVTY,2024,Bottom 10,ready,1
+GILD,2024,Bottom 10,ready,1
+INCY,2024,Bottom 10,ready,1
+CRL,2024,Bottom 10,ready,1
+VRTX,2024,Bottom 10,ready,1
+BAX,2024,Bottom 10,ready,1
+MRNA,2024,Bottom 10,ready,1
+BMY,2024,Bottom 10,ready,1
+AMGN,2025,Top 10,ready,1
+ZTS,2025,Top 10,ready,1
+LLY,2025,Top 10,ready,1
+IDXX,2025,Top 10,ready,1
+BMY,2025,Top 10,ready,1
+GILD,2025,Top 10,ready,1
+MRK,2025,Top 10,ready,1
+DXCM,2025,Top 10,ready,1
+INCY,2025,Top 10,ready,1
+RMD,2025,Top 10,ready,1
+HUM,2025,Bottom 10,ready,1
+BDX,2025,Bottom 10,ready,1
+ZBH,2025,Bottom 10,missing or ambiguous Item 1A,0
+COO,2025,Bottom 10,ready,1
+RVTY,2025,Bottom 10,ready,1
+CVS,2025,Bottom 10,ready,1
+CRL,2025,Bottom 10,ready,1
+BAX,2025,Bottom 10,ready,1
+MRNA,2025,Bottom 10,ready,1
+CNC,2025,Bottom 10,ready,1
