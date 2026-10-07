@@ -72,3 +72,7 @@ Each firm-level bridge averages the incremental contribution of each factor acro
 The industrial risk score 5 is an AI output, not a financial calculation. The supplied prompt has an example value 5 without an anchored severity rubric. All 472 saved outputs equal 5; the reason is unverified. Zero variance prevents a severity–ROE correlation. Treat this as a measurement limitation, not evidence of moderate risk.
 
 New dataframes retain source URLs and accession numbers. Eligibility requires at least five unflagged observed years. No missing year is imputed. The 40-company balanced panel additionally requires all six years. The retained population excludes some equity cases and is not the full healthcare sector. Source differences from older average-balance charts must not be combined.
+
+## Question-led revision
+
+The ten-slide presentation now explicitly answers: what happened, what accounts for differences, what business evidence might explain them, and why management should care. It includes ROE units, the three balanced-panel exclusions, outlier sensitivity, Pfizer and 3M source cases, and a clearly pending all-years AI comparison. No completed all-years AI findings have been supplied yet. Speaker notes document calculation and inference limits.
