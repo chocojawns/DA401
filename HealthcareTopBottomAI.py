@@ -4,6 +4,20 @@ from pathlib import Path
 from AIResearch import INSTRUCTIONS,chunks,digest,schema,normalize,append
 ROOT=Path(__file__).resolve().parent
 QUESTION='Compare the highest and lowest ROE healthcare firms separately for each fiscal year from 2020 through 2025. Focus this assessment on ranking_year and the matched fiscal-year disclosure. For this firm, explain the supplied DuPont profile and 2020–2025 history, identify disclosed risks relevant to margin, turnover or equity, and distinguish possible mechanisms from demonstrated causes. Do not treat highest ROE as best investment. Do not infer risk differences merely from the selected extreme groups.'
+def filter_findings(result,evidence):
+ """Keep exact-source findings; preserve rejected findings separately for review."""
+ accepted=[];rejected=[]
+ for finding in result['findings']:
+  quote=normalize(finding['supporting_quote'])
+  reason=None
+  if not quote or quote not in normalize(evidence['item_1a_excerpt']):reason='Quote failed exact source validation'
+  elif finding['source_url']!=evidence['filing']['source_url']:reason='Source URL mismatch'
+  if reason:rejected.append(dict(reason=reason,finding=finding))
+  else:accepted.append(finding)
+ clean=dict(result,findings=accepted,limitations=list(result['limitations']))
+ if rejected:clean['limitations'].append(f'{len(rejected)} finding(s) excluded for unsupported quotes or URLs; manual review required. This chunk is only partially validated, even if no findings remain.')
+ return clean,rejected
+
 def main():
  p=argparse.ArgumentParser(description=__doc__);p.add_argument('--execute',action='store_true');p.add_argument('--model',default='gpt-4.1-mini');p.add_argument('--input',type=Path,default=ROOT/'healthcare/reports/top_bottom_all_years/comparison_inputs.jsonl');p.add_argument('--output',type=Path,default=ROOT/'healthcare/results/top_bottom_all_years_ai');a=p.parse_args()
  records=[json.loads(s) for s in a.input.read_text().splitlines() if s.strip()];tasks=[]
@@ -35,10 +49,11 @@ def main():
    append(a.output/'responses.jsonl',dict(task_id=key,response=response.model_dump(mode='json')))
    if response.output_parsed is None:raise ValueError('Incomplete structured response; inspect responses.jsonl')
    result=response.output_parsed.model_dump()
-   for finding in result['findings']:
-    if not normalize(finding['supporting_quote']) or normalize(finding['supporting_quote']) not in normalize(evidence['item_1a_excerpt']):raise ValueError('Quote failed source validation')
-    if finding['source_url']!=evidence['filing']['source_url']:raise ValueError('Source URL failed validation')
-   row=dict(task_id=key,ticker=evidence['ticker'],group=evidence['group'],fiscal_year=evidence['filing']['fiscal_year'],chunk=evidence['chunk_number'],analysis=result);append(resultfile,row);done[key]=row
+   result,rejected=filter_findings(result,evidence)
+   if rejected:
+    append(a.output/'validation_issues.jsonl',dict(task_id=key,ticker=evidence['ticker'],fiscal_year=evidence['filing']['fiscal_year'],rejected=rejected))
+    print(f"Flagged {len(rejected)} unsupported finding(s); continuing with validated findings only.",flush=True)
+   row=dict(task_id=key,ticker=evidence['ticker'],group=evidence['group'],fiscal_year=evidence['filing']['fiscal_year'],chunk=evidence['chunk_number'],validation_status="partial_needs_review" if rejected else "quotes_checked",analysis=result);append(resultfile,row);done[key]=row
    lines=['# Healthcare top/bottom ROE risk comparison','',QUESTION,'','Separate annual 2020–2025 rankings; historical financial context. AI interpretations require human review. See risk_coverage.csv for missing disclosures. Quotes/URLs checked against inputs; claims are not causally verified.','']
    for group in ['Top 10','Bottom 10']:
     lines += ['## '+group,'']
