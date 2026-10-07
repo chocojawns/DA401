@@ -267,3 +267,12 @@ See the [input commands, research prompt, cost controls, and source limitations]
 ## Financial analysis: HealthcareAnalysis.py
 
 [HealthcareAnalysis.py](HealthcareAnalysis.py) reads a completed HealthcareStats run and produces financial comparisons, company outliers, consecutive-year changes, exploratory clustering, and a sourced list of research questions. It performs no downloads or AI calls. Supply documented subsector classifications to enable pharma/provider/insurer/etc. comparisons; labels are not guessed. See the [analysis guide](docs/HealthcareAnalysis-guide.md) for commands, outputs, and interpretation limits.
+
+After collecting SEC data, run the five-year comparison on the new results folder:
+
+```powershell
+python .\HealthcareAnalysis.py --run-dir ".\healthcare\results\research\YOUR_RUN_FOLDER" --min-years 5
+```
+
+Check `company_eligibility.csv` and `analysis_coverage.csv` in the analysis output.
+Raw collector files are preserved even when a company does not qualify.

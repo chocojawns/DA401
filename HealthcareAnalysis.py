@@ -102,7 +102,15 @@ def analyze(df,out,start,end,min_years):
     clean=df[df.analysis_exclusion.eq('')].copy()
     if clean.empty:raise ValueError('No usable rows after quality exclusions')
     counts=clean.groupby('ticker').fiscal_year.nunique()
+    eligibility = pd.DataFrame(index=pd.Index(sorted(df.ticker.unique()), name='ticker'))
+    eligibility['usable_years'] = counts.reindex(eligibility.index, fill_value=0)
+    eligibility['included'] = eligibility.usable_years >= min_years
+    eligibility['reason'] = np.where(eligibility.included, '', f'Fewer than {min_years} usable fiscal years')
+    eligibility.to_csv(out/'company_eligibility.csv')
     eligible=counts[counts>=min_years].index
+    clean = clean[clean.ticker.isin(eligible)].copy()
+    if clean.empty:
+        raise ValueError(f'No companies have {min_years} usable years; see company_eligibility.csv')
     company=clean[clean.ticker.isin(eligible)].groupby('ticker')[METRICS].mean()
     company=company.join(counts.rename('years_available')).join(clean.groupby('ticker').subsector.first())
     company.to_csv(out/'company_averages.csv')
@@ -170,7 +178,7 @@ def main():
     p.add_argument('--run-dir',type=Path,required=True)
     p.add_argument('--subsectors',type=Path)
     p.add_argument('--output',type=Path)
-    p.add_argument('--min-years',type=int,default=3)
+    p.add_argument('--min-years',type=int,default=5)
     args=p.parse_args()
     if args.min_years<1:p.error('min-years must be positive')
     source=args.run_dir/'financials.csv';df=load_financials(source)

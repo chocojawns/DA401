@@ -100,7 +100,16 @@ def primary_document(submission):
     raise ValueError('No primary 10-K document found in submission')
 
 
-def filing_metadata(html):
+# Exact original filings whose DEI fiscal-year tag contradicts their cover
+# and annual-report narrative. Do not infer fiscal labels from end-date years:
+# January year ends can legitimately belong to the previous fiscal year.
+FISCAL_YEAR_CORRECTIONS = {
+    ('0000920148', '0000920148-23-000017', '2022-12-31', 2021): 2022,
+    ('0001393052', '0001393052-22-000017', '2022-01-31', 2021): 2022,
+}
+
+
+def filing_metadata(html, cik=None, accession=None):
     soup = BeautifulSoup(html, 'html.parser')
     def field(name):
         values = {node.get_text('', strip=True) for node in soup.find_all(
@@ -111,6 +120,8 @@ def filing_metadata(html):
     year = int(field('DocumentFiscalYearFocus'))
     period = field('DocumentPeriodEndDate')
     period = pd.to_datetime(period).date().isoformat()
+    key = (str(cik).zfill(10), accession, period, year)
+    year = FISCAL_YEAR_CORRECTIONS.get(key, year)
     return year, period
 
 
@@ -305,12 +316,16 @@ def main():
                 try:
                     submission = sec.get(url)
                     html = primary_document(submission)
-                    year, period = filing_metadata(html)
+                    raw_year, _ = filing_metadata(html)
+                    year, period = filing_metadata(html, cik, acc)
                     if period != filing['end']:
                         raise ValueError('Filing report period disagrees with selected financial period')
                     if not args.start_year <= year <= args.end_year:
                         continue
-                    record.update(fiscal_year=year, period_end=period)
+                    record.update(fiscal_year=year, period_end=period,
+                                  reported_fiscal_year=raw_year,
+                                  fiscal_year_correction=('Verified original filing: erroneous DEI fiscal-year tag'
+                                                          if year != raw_year else ''))
                 except Exception as e:
                     status.append(dict(**record, stage='filing_metadata', error=str(e)))
                     continue

@@ -100,3 +100,27 @@ The original filing (accession `0000078003-24-000039`) reports product revenues 
 Source: https://www.sec.gov/Archives/edgar/data/78003/000007800324000039/0000078003-24-000039.txt (consolidated statement of income).
 
 After this correction, a live Pfizer 2020–2025 run produced six financial rows and six Item 1A sections. Nine tests pass. This is still a single-company validation, not sector-wide validation.
+
+### Verified fiscal-year exceptions
+
+Two original 10-Ks contain an erroneous `DocumentFiscalYearFocus` of 2021.
+The collector applies corrections only to the exact CIK, accession, period end,
+and reported year below. Other fiscal calendars are unchanged.
+
+- [Labcorp 0000920148-23-000017](https://www.sec.gov/Archives/edgar/data/920148/000092014823000017/0000920148-23-000017.txt): cover states fiscal year ended December 31, 2022; corrected label 2022.
+- [Veeva 0001393052-22-000017](https://www.sec.gov/Archives/edgar/data/1393052/000139305222000017/0001393052-22-000017.txt): cover states year ended January 31, 2022 and narrative calls it fiscal 2022; corrected label 2022.
+
+Outputs retain `reported_fiscal_year` and `fiscal_year_correction` for audit.
+Unresolved duplicate company-years still stop processing rather than deleting data.
+
+### Five-year analysis eligibility
+
+`HealthcareAnalysis.py` now defaults to `--min-years 5`. It counts distinct
+usable fiscal years after quality exclusions and applies the eligible company
+cohort to its comparisons, trends, outliers, and clustering. The collector still
+retains all available financials and Item 1A text; collector graphs are coverage
+previews, not the five-year-filtered analysis. `company_eligibility.csv` documents
+companies present in the financial data that were included/excluded;
+`analysis_coverage.csv` also lists requested companies with no financial records.
+2020–2025 contains six fiscal years: the threshold allows one missing year and
+does not guarantee a balanced panel. Missingness and survivorship can bias results.

@@ -15,6 +15,9 @@ class AnalysisTests(unittest.TestCase):
                 rows.append(dict(ticker=f'T{i}',fiscal_year=year,profit_margin=margin,asset_turnover=turnover,
                     equity_multiplier=leverage,roe=margin*turnover*leverage,equity_warning=False,
                     source_url='https://example.com',analysis_exclusion='',subsector='Group A' if i<6 else 'Group B'))
+        # An otherwise valid firm with only two years must not enter any
+        # comparisons when the required minimum is three.
+        rows += [dict(rows[j], ticker='SHORT') for j in range(2)]
         with tempfile.TemporaryDirectory() as tmp:
             out=Path(tmp);a.analyze(pd.DataFrame(rows),out,2020,2023,3)
             self.assertTrue((out/'company_clusters.csv').exists())
@@ -22,6 +25,9 @@ class AnalysisTests(unittest.TestCase):
             self.assertIn(2,scores.k.values)
             self.assertEqual(len(pd.read_csv(out/'annual_changes.csv')),36)
             self.assertTrue((out/'roe_subsectors.png').exists())
+            eligibility=pd.read_csv(out/'company_eligibility.csv').set_index('ticker')
+            self.assertFalse(eligibility.loc['SHORT','included'])
+            self.assertNotIn('SHORT',pd.read_csv(out/'company_averages.csv').ticker.values)
 
     def test_duplicate_rows_rejected(self):
         row=dict(ticker='A',fiscal_year=2024,profit_margin=.1,asset_turnover=1,equity_multiplier=2,

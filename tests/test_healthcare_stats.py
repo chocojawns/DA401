@@ -30,6 +30,15 @@ def fixture():
 
 
 class Tests(unittest.TestCase):
+    def test_verified_fiscal_labels_are_scoped_to_original_filing(self):
+        for cik, acc, end in [('920148','0000920148-23-000017','2022-12-31'),
+                              ('1393052','0001393052-22-000017','2022-01-31')]:
+            html = (f'<ix:nonNumeric name="dei:DocumentFiscalYearFocus">2021</ix:nonNumeric>'
+                    f'<ix:nonNumeric name="dei:DocumentPeriodEndDate">{end}</ix:nonNumeric>')
+            self.assertEqual(h.filing_metadata(html, cik, acc), (2022, end))
+            self.assertEqual(h.filing_metadata(html, cik, 'different-accession'), (2021, end))
+            self.assertEqual(h.filing_metadata(html, '1', acc), (2021, end))
+
     def test_averages_identity(self):
         facts,filing,_=fixture(); r=h.calculate(facts,filing)
         self.assertAlmostEqual(r['roe'],.2)
